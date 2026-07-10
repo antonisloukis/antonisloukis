@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner.png" alt="Cloud DevOps banner" width="950">
+  <img src="banner.png" alt="Cloud DevOps banner" width="900">
 </p>
 
 
