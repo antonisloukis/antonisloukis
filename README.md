@@ -46,14 +46,7 @@ Building reliable cloud infrastructure, automating deployments, and continuously
 
 ## ☁️ Current Learning
 
-- Boot.dev DevOps Path
-- AWS
-- Docker
-- Kubernetes
-- Terraform
-- Linux
-- CI/CD
-- Platform Engineering
+
 
 ---
 
@@ -61,10 +54,7 @@ Building reliable cloud infrastructure, automating deployments, and continuously
 
 Coming soon...
 
-- AWS Certified Cloud Practitioner
-- AWS Solutions Architect Associate
-- Terraform Associate
-- Certified Kubernetes Administrator
+
 
 ---
 
