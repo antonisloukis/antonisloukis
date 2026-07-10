@@ -35,7 +35,7 @@ Building reliable cloud infrastructure, automating deployments, and continuously
 ---
 
 ##
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=antonisloukis&layout=compact&theme=tokyonight&hide_border=true)
+![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=antonisloukis&theme=github_dark)
 
 ---
 
