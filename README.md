@@ -20,7 +20,7 @@ Building reliable cloud infrastructure, automating deployments, and continuously
 <tr>
 <td>
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=antonisloukis&show_icons=true&theme=github_dark&hide_border=true)
+![](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=antonisloukis&theme=github_dark)
 
 </td>
 
