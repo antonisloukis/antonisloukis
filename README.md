@@ -26,7 +26,7 @@ Building reliable cloud infrastructure, automating deployments, and continuously
 
 <td>
 
-
+![](https://streak-stats.demolab.com?user=antonisloukis&theme=github-dark&hide_border=true)
 
 </td>
 </tr>
