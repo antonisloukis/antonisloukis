@@ -78,11 +78,7 @@ Coming soon...
 </tr>
 </table>
 
-##
 
-<p align="center">
-  <img src="./profile-3d-contrib/profile-night-green.svg" width="80%">
-</p>
 
 
 
