@@ -35,7 +35,9 @@ Building reliable cloud infrastructure, automating deployments, and continuously
 
 ##
 
-![](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=antonisloukis&theme=github_dark)
+<p align="center">
+  <img src="./profile-3d-contrib/profile-night-view.svg" width="100%">
+</p>
 
 ---
 
