@@ -8,7 +8,7 @@ Cloud • DevOps • Platform Engineer
 
 📊 Gɪᴛʜᴜʙ Sᴛᴀᴛs 📊
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=antonisloukis)
+![GitHub Streak](https://streak-stats.demolab.com?user=antonisloukis&theme=github-dark&hide_border=true)
 
 
 
