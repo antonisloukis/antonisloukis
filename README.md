@@ -20,13 +20,13 @@ Building reliable cloud infrastructure, automating deployments, and continuously
 <tr>
 <td>
 
-![](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=antonisloukis&theme=github_dark)
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=antonisloukis&theme=github_dark)
 
 </td>
 
 <td>
 
-![GitHub Streak](https://streak-stats.demolab.com?user=antonisloukis&theme=github-dark&hide_border=true)
+
 
 </td>
 </tr>
