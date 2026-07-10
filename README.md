@@ -43,15 +43,7 @@ Coming soon...
 
 ## 🧪 Hands-On Labs
 
-┌──────────────┐
-│ Boot.dev     │
-│ Backend Path │
-└──────────────┘
-
-┌──────────────┐
-│ KodeKloud    │
-│ DevOps Path  │
-└──────────────┘
+Coming soon...
 
 ---
 
