@@ -32,11 +32,10 @@ Building reliable cloud infrastructure, automating deployments, and continuously
 </tr>
 </table>
 
----
 
 ##
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=antonisloukis&layout=donut&theme=tokyonight)
+![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=antonisloukis&theme=github_dark)
 
 ---
 
