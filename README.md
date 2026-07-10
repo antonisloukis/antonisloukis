@@ -2,16 +2,17 @@
   <img src="banner.png" alt="Cloud DevOps banner" width="900">
 </p>
 
-Hi 👋 I'm Antonis
+<h1 align="center">Hi 👋 I'm Antonis Loukis</h1>
 
-Cloud • DevOps • Platform Engineer
+<p align="center">
+Cloud • DevOps • Platform Engineering
+</p>
 
----------------------------------------
+<p align="center">
+Building reliable cloud infrastructure, automating deployments, and continuously learning modern DevOps practices.
+</p>
 
-##📊 Gɪᴛʜᴜʙ Sᴛᴀᴛs 📊
-
-
-![GitHub Streak](https://streak-stats.demolab.com?user=antonisloukis&theme=github-dark&hide_border=true)
+---
 
 
 
