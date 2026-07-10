@@ -83,11 +83,6 @@ Coming soon...
 | GitHub Actions | CI/CD Pipelines |
 | Linux Automation | Bash scripting |
 
----
-
-## 📈 Contribution Graph
-
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=antonisloukis&theme=github-dark&hide_border=true)
 
 ---
 
