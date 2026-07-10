@@ -25,7 +25,9 @@ Building reliable cloud infrastructure, automating deployments, and continuously
 
 ---
 
-## ☁️ Current Learning
+## ☁️ Learning Platforms
+
+Coming soon...
 
 
 
