@@ -32,11 +32,10 @@ Building reliable cloud infrastructure, automating deployments, and continuously
 </tr>
 </table>
 
-
 ##
 
 <p align="center">
-  <img src="./profile-3d-contrib/profile-night-view.svg" width="100%">
+  <img src="./profile-3d-contrib/profile-night-green.svg" width="100%">
 </p>
 
 ---
