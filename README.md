@@ -2,6 +2,9 @@
   <img src="banner.png" alt="Cloud DevOps banner" width="900">
 </p>
 
+Hi 👋 I'm Antonis
+
+Cloud • DevOps • Platform Engineer
 
 <!--
 **antonisloukis/antonisloukis** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
