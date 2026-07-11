@@ -51,11 +51,9 @@ Coming soon...
 
 ### ◎ GitHub Statistics
 
+![](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=antonisloukis&theme=github_dark)
 
-<p align="center">
-  <img src="...stats..." width="430">
-  <img src="...productive-time..." width="430">
-</p>
+![](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=antonisloukis&theme=github_dark&utcOffset=3)
 
 
 
