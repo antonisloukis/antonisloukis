@@ -2,9 +2,6 @@
   <img src="banner.png" alt="Cloud DevOps banner" width="900">
 </p>
 
-<p align="center">
-Cloud • DevOps • Platform Engineering
-</p>
 
 
 
