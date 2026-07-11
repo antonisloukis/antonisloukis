@@ -13,7 +13,7 @@ Building reliable cloud infrastructure, automating deployments, and continuously
 ---
 
 
-## 💻 Tech Stack
+## ⚙ Tech Stack
 
 <p align="center">
 
