@@ -23,7 +23,7 @@ Building reliable cloud infrastructure, automating deployments, and continuously
 
 ---
 
-## ☁️ Platform Achievements
+## ◈ Platform Achievements
 
 Coming soon...
 
@@ -31,7 +31,7 @@ Coming soon...
 
 ---
 
-## 🏆 Certifications
+## ⬡ Certifications
 
 Coming soon...
 
@@ -39,13 +39,13 @@ Coming soon...
 
 ---
 
-## 🧪 Hands-On Labs
+## ◉ Hands-On Labs
 
 Coming soon...
 
 ---
 
-## 🚀 Featured Projects
+## ▣ Featured Projects
 
 | Project | Description |
 |---------|-------------|
@@ -58,7 +58,7 @@ Coming soon...
 
 ---
 
-## 📊 GitHub Statistics
+## ◎ GitHub Statistics
 
 <table>
 <tr>
