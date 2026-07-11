@@ -38,6 +38,7 @@ Coming soon...
 
 ### ▣ Featured Projects
 
+
 | Project | Description |
 |---------|-------------|
 | Cloud Infrastructure | Terraform + AWS |
@@ -49,6 +50,7 @@ Coming soon...
 
 
 ### ◎ GitHub Statistics
+
 
 <table>
 <tr>
