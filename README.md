@@ -49,7 +49,7 @@ Coming soon...
 
 
 
-### ◎ GitHub Statistics
+### ◫ GitHub Statistics
 
 <p align="center">
   <img
