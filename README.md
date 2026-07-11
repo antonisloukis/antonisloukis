@@ -6,14 +6,10 @@
 Cloud • DevOps • Platform Engineering
 </p>
 
-<p align="center">
-Building reliable cloud infrastructure, automating deployments, and continuously learning modern DevOps practices.
-</p>
-
----
 
 
-## ◇ Tech Stack
+
+### ◇ Tech Stack
 
 <p align="center">
 
@@ -21,31 +17,26 @@ Building reliable cloud infrastructure, automating deployments, and continuously
 
 </p>
 
----
 
-## ◈ Platform Achievements
-
-Coming soon...
-
-
-
----
-
-## ⬡ Certifications
+### ◈ Platform Achievements
 
 Coming soon...
 
 
 
----
-
-## ◉ Hands-On Labs
+### ⬡ Certifications
 
 Coming soon...
 
----
 
-## ▣ Featured Projects
+
+### ◉ Hands-On Labs
+
+Coming soon...
+
+
+
+### ▣ Featured Projects
 
 | Project | Description |
 |---------|-------------|
@@ -56,9 +47,8 @@ Coming soon...
 | Linux Automation | Bash scripting |
 
 
----
 
-## ◎ GitHub Statistics
+### ◎ GitHub Statistics
 
 <table>
 <tr>
