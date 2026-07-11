@@ -52,21 +52,10 @@ Coming soon...
 ### ◎ GitHub Statistics
 
 
-<table>
-<tr>
-<td>
-
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=antonisloukis&theme=github_dark" width="430">
-
-</td>
-
-<td>
-
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=antonisloukis&theme=github_dark&utcOffset=3" width="430">
-
-</td>
-</tr>
-</table>
+<p align="center">
+  <img src="...stats..." width="430">
+  <img src="...productive-time..." width="430">
+</p>
 
 
 
