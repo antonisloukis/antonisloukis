@@ -37,63 +37,65 @@ Coming soon...
 
 <table>
   <tr>
+
     <td width="55%" valign="top">
 
-### Engineering Projects
+<h3>Cloud Projects</h3>
 
-- [AWS Infrastructure Lab](https://github.com/antonisloukis/aws-infrastructure-lab)  
-  Terraform-based AWS network and compute infrastructure.
+<ul>
+<li><a href="#">AWS Infrastructure Lab</a><br>
+Terraform-based AWS network and compute infrastructure.</li>
 
-- [Kubernetes Homelab](https://github.com/antonisloukis/kubernetes-homelab)  
-  Production-style Kubernetes cluster with monitoring.
+<br>
 
-- [GitHub Actions CI/CD](https://github.com/antonisloukis/github-actions-pipeline)  
-  Automated testing and deployment workflows.
+<li><a href="#">Kubernetes Homelab</a><br>
+Production-style Kubernetes cluster with monitoring.</li>
 
-- [Linux Automation](https://github.com/antonisloukis/linux-automation)  
-  Bash scripts for administration and repetitive tasks.
+<br>
+
+<li><a href="#">GitHub Actions CI/CD</a><br>
+Automated testing and deployment workflows.</li>
+
+<br>
+
+<li><a href="#">Linux Automation</a><br>
+Bash scripts for administration and repetitive tasks.</li>
+</ul>
+
+    </td>
+
+    <td width="45%" valign="top" align="center">
+
+<h3>Applications</h3>
+
+<a href="#">
+<img src="./assets/platform-doctor-icon.png" width="72">
+</a>
+
+<br>
+
+<strong><a href="#">Platform Doctor</a></strong>
+
+<br>
+
+Cloud & Kubernetes diagnostics.
+
+<br><br><br>
+
+<a href="#">
+<img src="./assets/second-app-icon.png" width="72">
+</a>
+
+<br>
+
+<strong><a href="#">Second App</a></strong>
+
+<br>
+
+Short description.
 
     </td>
 
-    <td width="45%" valign="top">
-
-### Applications
-
-<p align="center">
-  <a href="https://github.com/antonisloukis/platform-doctor">
-    <img src="./assets/platform-doctor-icon.png" width="72" />
-  </a>
-</p>
-
-<p align="center">
-  <strong>
-    <a href="https://github.com/antonisloukis/platform-doctor">
-      Platform Doctor
-    </a>
-  </strong>
-  <br />
-  Cloud and Kubernetes diagnostics.
-</p>
-
-<br />
-
-<p align="center">
-  <a href="https://github.com/antonisloukis/second-app">
-    <img src="./assets/second-app-icon.png" width="72" />
-  </a>
-</p>
-
-<p align="center">
-  <strong>
-    <a href="https://github.com/antonisloukis/second-app">
-      Second App
-    </a>
-  </strong>
-  <br />
-  Short description of the app.
-</p>
-
-    </td>
   </tr>
 </table>
 
