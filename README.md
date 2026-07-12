@@ -35,8 +35,6 @@ Coming soon...
 
 ### ▣ Featured Work
 
-### ▣ Featured Work
-
 <table>
   <tr>
     <td width="55%" valign="top">
