@@ -35,10 +35,9 @@ Coming soon...
 
 ### ▣ Featured Work
 
-
 <table>
-  <tr>
-    <td width="55%" valign="top">
+<tr>
+<td width="55%" valign="top">
 
 ### Cloud Projects
 
@@ -54,9 +53,9 @@ Coming soon...
 - [Linux Automation](https://github.com/antonisloukis/linux-automation)  
   Bash scripts for administration and repetitive tasks.
 
-    </td>
+</td>
 
-    <td width="45%" valign="top">
+<td width="45%" valign="top">
 
 ### Applications
 
@@ -94,10 +93,9 @@ Coming soon...
   Short description of the app.
 </p>
 
-    </td>
-  </tr>
+</td>
+</tr>
 </table>
-
 
 ### ◫ GitHub Statistics
 
