@@ -8,13 +8,13 @@
 </p>
 
 
-### ◈ Platform Achievements
+### ◈ Learning Achievements
 
 Coming soon...
 
 
 
-### ◫ GitHub Statistics
+### ◫ GitHub Activity
 
 <p align="center">
   <img src="https://ghstats.dev/api/card?username=antonisloukis&hide_border=true&hide_title=true&border_radius=5&hide=stars%2Cprs%2Cissues%2Cfollowers%2Crepos%2Cactive_day%2Cavg%2Cweek%2Ctrend" alt="GitHub Stats Card" width="460" />
