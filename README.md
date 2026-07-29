@@ -10,7 +10,20 @@
 
 ### ◈ Learning Achievements
 
-Coming soon...
+<p>
+  <img
+    src="https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/dKouhF7-2251x1881.png"
+    width="22"
+    align="center"
+    alt="Boot.dev"
+  />
+  <strong>&nbsp;Boot.dev</strong>
+</p>
+
+<ul>
+  <li>Backend Developer Path — In Progress</li>
+  <li>DevOps Path — Planned</li>
+</ul>
 
 
 
