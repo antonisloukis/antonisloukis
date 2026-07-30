@@ -16,7 +16,7 @@
 </a>
 
 <strong>
-&nbsp;<a href="https://www.boot.dev/u/swatscone">Boot.dev</a>
+&nbsp;<a href="https://www.boot.dev/u/swatsecone">Boot.dev</a>
 </strong>
 </p>
 
