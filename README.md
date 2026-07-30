@@ -10,18 +10,18 @@
 
 ### ◈ Learning Achievements
 
-<p>
-  <a href="https://www.boot.dev/u/swatsecone">
-    <img src="./bootdev.png" width="22" align="center" alt="Boot.dev">
-  </a>
-  <strong>&nbsp;<a href="https://www.boot.dev/u/swatsecone">Boot.dev</a></strong>
+<p align="center">
+<a href="https://www.boot.dev/u/swatsecone">
+<img src="./bootdev.png" width="22">
+</a>
+<strong>&nbsp;<a href="https://www.boot.dev/u/swatsecone">Boot.dev</a></strong>
 
-  &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
 
-  <a href="YOUR_LABEX_PROFILE_URL">
-    <img src="./labexio.jpg" width="22" align="center" alt="LabEx">
-  </a>
-  <strong>&nbsp;<a href="https://labex.io/u/antonis-loukis-55763425">LabEx</a></strong>
+<a href="https://labex.io/u/antonis-loukis-55763425">
+<img src="./labexio.jpg" width="22">
+</a>
+<strong>&nbsp;<a href="https://labex.io/u/antonis-loukis-55763425">LabEx</a></strong>
 </p>
 
 <p>
