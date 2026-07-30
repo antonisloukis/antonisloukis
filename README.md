@@ -11,6 +11,7 @@
 ### ◈ Learning Achievements
 
 <p align="center">
+
 <a href="https://www.boot.dev/u/swatsecone">
 <img src="./bootdev.png" width="22">
 </a>
@@ -22,14 +23,7 @@
 <img src="./labexio.jpg" width="22">
 </a>
 <strong>&nbsp;<a href="https://labex.io/u/antonis-loukis-55763425">LabEx</a></strong>
-</p>
 
-<p>
-▸ Backend Developer Path <b>⏳ In Progress</b><br>
-▸ DevOps Path <b>📋 Planned</b><br><br>
-
-▸ LabEx Linux Skill Tree <b>📋 Planned</b><br>
-▸ LabEx Git Skill Tree <b>📋 Planned</b>
 </p>
 
 
