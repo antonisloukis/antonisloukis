@@ -38,7 +38,7 @@
 
 <p>
 <a href="https://labex.io/u/antonis-loukis-55763425">
-<img src="./labex.png" width="22" align="center">
+<img src="./labex.jpg" width="22" align="center">
 </a>
 <strong>&nbsp;<a href="https://labex.io/u/antonis-loukis-55763425">LabEx</a></strong>
 </p>
