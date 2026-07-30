@@ -27,7 +27,7 @@
 
 <td align="center" width="50%">
   <a href="https://labex.io/u/antonis-loukis-55763425">
-    <img src="./labexio.jpg" width="18" align="center" alt="LabEx">
+    <img src="./labexio.jpg" width="19" align="center" alt="LabEx">
   </a>
   <strong>
     &nbsp;<a href="https://labex.io/u/antonis-loukis-55763425">LabEx</a>
