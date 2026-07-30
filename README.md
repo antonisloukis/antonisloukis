@@ -20,10 +20,10 @@
   <strong>&nbsp;Boot.dev</strong>
 </p>
 
-<ul>
-  <li>Backend Developer Path — In Progress</li>
-  <li>DevOps Path — Planned</li>
-</ul>
+<p>
+▸ Backend Developer Path <b>• In Progress</b><br>
+▸ DevOps Path <b>• Planned</b>
+</p>
 
 
 
