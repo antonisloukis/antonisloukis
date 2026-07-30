@@ -40,7 +40,6 @@
 </tr>
 </table>
 
-<hr>
 
 ### ◫ GitHub Activity
 
