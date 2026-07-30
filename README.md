@@ -11,7 +11,7 @@
 ### ◈ Learning Achievements
 
 <p>
-<a href="https://www.boot.dev/u/swatscone">
+<a href="https://www.boot.dev/u/swatsecone">
 <img src="./bootdev.png" width="22" align="center">
 </a>
 
