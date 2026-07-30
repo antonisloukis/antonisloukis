@@ -10,21 +10,48 @@
 
 ### ◈ Learning Achievements
 
+<table>
+<tr>
+
+<td valign="top" width="47%">
+
 <p>
 <a href="https://www.boot.dev/u/swatsecone">
 <img src="./bootdev.png" width="22" align="center">
 </a>
-
-<strong>
-&nbsp;<a href="https://www.boot.dev/u/swatsecone">Boot.dev</a>
-</strong>
+<strong>&nbsp;<a href="https://www.boot.dev/u/swatsecone">Boot.dev</a></strong>
 </p>
 
 <p>
-▸ Backend Developer Path <b>• In Progress</b><br>
-▸ DevOps Path <b>• Planned</b>
+▸ Backend Developer Path <b>⏳ In Progress</b><br>
+▸ DevOps Path <b>📋 Planned</b>
 </p>
 
+</td>
+
+<td
+  width="6%"
+  style="border-left:1px solid #30363d;">
+</td>
+
+<td valign="top" width="47%">
+
+<p>
+<a href="https://labex.io/u/antonis-loukis-55763425">
+<img src="./labex.jpg" width="22" align="center">
+</a>
+<strong>&nbsp;<a href="https://labex.io/u/antonis-loukis-55763425">LabEx</a></strong>
+</p>
+
+<p>
+▸ Linux Skill Tree <b>📋 Planned</b><br>
+▸ Git Skill Tree <b>📋 Planned</b>
+</p>
+
+</td>
+
+</tr>
+</table>
 
 
 ### ◫ GitHub Activity
