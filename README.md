@@ -11,13 +11,15 @@
 ### ◈ Learning Achievements
 
 <p>
-  <img
-    src="https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/dKouhF7-2251x1881.png"
-    width="22"
-    align="center"
-    alt="Boot.dev"
-  />
-  <strong>&nbsp;Boot.dev</strong>
+    <a href="https://www.boot.dev/u/swatscone">
+        <img
+        src="https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/dk0uhF7-2251x1881.png"
+        width="22"
+        align="center"
+        alt="Boot.dev"
+        />
+    </a>
+    <strong>&nbsp;<a href="https://www.boot.dev/u/swatscone">Boot.dev</a></strong>
 </p>
 
 <p>
