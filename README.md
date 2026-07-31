@@ -41,6 +41,43 @@
 </table>
 
 
+### ▣ Featured Projects
+
+<table>
+<tr>
+
+<td width="50%" valign="top">
+
+### 🚀 [Asteroids](https://github.com/antonisloukis/asteroids)
+
+Python/Pygame implementation of the classic Asteroids arcade game.
+
+**Stack:** Python 
+
+[Repository](https://github.com/antonisloukis/asteroids) · [Documentation](https://github.com/antonisloukis/asteroids/blob/main/README.md)
+
+</td>
+
+<td width="50%" valign="top">
+
+### 📓 [Bookbot](https://github.com/antonisloukis/bookbot)
+
+A command-line tool that analyzes text files and prints word and character statistics.
+
+**Stack:** Python
+
+[Repository](https://github.com/antonisloukis/bookbot) · [Documentation](https://github.com/antonisloukis/bookbot/blob/main/README.md)
+
+</td>
+
+</tr>
+</table>
+
+
+
+
+
+
 ### ◫ GitHub Activity
 
 <p align="center">
