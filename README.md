@@ -54,9 +54,8 @@
 
 Python/Pygame implementation of the classic Asteroids arcade game.
 
-**Stack:** Python ·
+**Stack:** Python · Pygame
 
-[README](https://github.com/antonisloukis/asteroids/blob/main/README.md)
 
 </td>
 
@@ -68,7 +67,6 @@ A command-line tool that analyzes text files and prints word and character stati
 
 **Stack:** Python
 
-[README](https://github.com/antonisloukis/bookbot/blob/main/README.md)
 
 </td>
 
