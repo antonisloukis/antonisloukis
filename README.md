@@ -43,8 +43,8 @@
 
 ### ▣ Featured Projects
 
-<h3 style="color:#c9c9c9;">Applications</h3>
-### Applications
+
+#### Applications
 <table>
 <tr>
 
