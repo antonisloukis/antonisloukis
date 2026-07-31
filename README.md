@@ -43,12 +43,12 @@
 
 ### ▣ Featured Projects
 
+
+### Applications
 <table>
 <tr>
 
 <td width="50%" valign="top">
-
-### Applications
 
 ### 🚀 [Asteroids](https://github.com/antonisloukis/asteroids)
 
