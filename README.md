@@ -48,6 +48,8 @@
 
 <td width="50%" valign="top">
 
+### Applications
+
 ### 🚀 [Asteroids](https://github.com/antonisloukis/asteroids)
 
 Python/Pygame implementation of the classic Asteroids arcade game.
