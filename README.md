@@ -3,7 +3,7 @@
 
 <p align="center">
 
-<img src="https://skillicons.dev/icons?i=linux,bash,git,github,docker,kubernetes,terraform,aws,go,python,vscode&theme=dark" />
+<img src="https://skillicons.dev/icons?i=linux,bash,git,github,docker,kubernetes,terraform,aws,go,python,vscode,grafana&theme=dark" />
 
 </p>
 
