@@ -1003,7 +1003,7 @@ def build_svg(
     x1="500"
     y1="34"
     x2="500"
-    y2="302"
+    y2="218"
     stroke="{LINE}"
     stroke-width="1.5"
   />
@@ -1036,9 +1036,9 @@ def build_svg(
 
   <line
     x1="667"
-    y1="338"
+    y1="232"
     x2="667"
-    y2="432"
+    y2="315"
     stroke="{LINE}"
     stroke-width="1.5"
   />
@@ -1046,12 +1046,12 @@ def build_svg(
   {icon(
       "people",
       155,
-      332,
+      226,
   )}
 
   <text
     x="167"
-    y="390"
+    y="278"
     text-anchor="middle"
     class="metric-number">
     {stats["total_contributions"]:,}
@@ -1059,7 +1059,7 @@ def build_svg(
 
   <text
     x="167"
-    y="421"
+    y="307"
     text-anchor="middle"
     class="metric-label">
     Total contributions
@@ -1068,12 +1068,12 @@ def build_svg(
   {icon(
       "flame",
       488,
-      332,
+      226,
   )}
 
   <text
     x="500"
-    y="390"
+    y="278"
     text-anchor="middle"
     class="metric-number">
     {stats["current_streak"]}
@@ -1081,7 +1081,7 @@ def build_svg(
 
   <text
     x="500"
-    y="421"
+    y="307"
     text-anchor="middle"
     class="metric-label">
     Current streak
@@ -1090,12 +1090,12 @@ def build_svg(
   {icon(
       "trophy",
       822,
-      332,
+      226,
   )}
 
   <text
     x="834"
-    y="390"
+    y="278"
     text-anchor="middle"
     class="metric-number">
     {stats["longest_streak"]}
@@ -1103,7 +1103,7 @@ def build_svg(
 
   <text
     x="834"
-    y="421"
+    y="307"
     text-anchor="middle"
     class="metric-label">
     Longest streak
@@ -1111,7 +1111,7 @@ def build_svg(
 
   <text
     x="958"
-    y="449"
+    y="330"
     text-anchor="end"
     class="updated">
     Updated {esc(updated)}
