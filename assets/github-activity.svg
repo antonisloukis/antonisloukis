@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="900"
+     height="390"
+     viewBox="0 0 900 390"
+     role="img"
+     aria-labelledby="title description">
+
+  <title id="title">antonisloukis GitHub activity</title>
+
+  <desc id="description">
+    Automatically updated GitHub statistics and language usage.
+  </desc>
+
+  <defs>
+    <linearGradient id="blue-line" x1="0" x2="1">
+      <stop offset="0%" stop-color="#58A6FF" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#58A6FF"/>
+      <stop offset="100%" stop-color="#58A6FF" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .title {
+      font: 700 24px -apple-system, BlinkMacSystemFont,
+            "Segoe UI", sans-serif;
+      fill: #58A6FF;
+    }
+
+    .section {
+      font: 700 18px -apple-system, BlinkMacSystemFont,
+            "Segoe UI", sans-serif;
+      fill: #58A6FF;
+    }
+
+    .label {
+      font: 500 14px -apple-system, BlinkMacSystemFont,
+            "Segoe UI", sans-serif;
+      fill: #C9D1D9;
+    }
+
+    .value {
+      font: 700 16px -apple-system, BlinkMacSystemFont,
+            "Segoe UI", sans-serif;
+      fill: #F0F6FC;
+    }
+
+    .big {
+      font: 700 28px -apple-system, BlinkMacSystemFont,
+            "Segoe UI", sans-serif;
+      fill: #58A6FF;
+    }
+
+    .muted {
+      font: 400 12px -apple-system, BlinkMacSystemFont,
+            "Segoe UI", sans-serif;
+      fill: #8B949E;
+    }
+  </style>
+
+  <rect x="1"
+        y="1"
+        width="898"
+        height="388"
+        rx="18"
+        fill="none"
+        stroke="#30363D"/>
+
+  <text x="36" y="42" class="title">GitHub Activity</text>
+
+  <rect x="36"
+        y="57"
+        width="828"
+        height="2"
+        rx="1"
+        fill="url(#blue-line)"/>
+
+  <!-- GitHub statistics -->
+
+  <g transform="translate(36,88)">
+    <text x="0" y="0" class="section">GitHub Stats</text>
+
+    <circle cx="8" cy="38" r="4" fill="#58A6FF"/>
+    <text x="24" y="43" class="label">Public repositories</text>
+    <text x="330" y="43" text-anchor="end" class="value">
+      4
+    </text>
+
+    <circle cx="8" cy="72" r="4" fill="#58A6FF"/>
+    <text x="24" y="77" class="label">Contributions</text>
+    <text x="330" y="77" text-anchor="end" class="value">
+      203
+    </text>
+
+    <circle cx="8" cy="106" r="4" fill="#58A6FF"/>
+    <text x="24" y="111" class="label">Total stars earned</text>
+    <text x="330" y="111" text-anchor="end" class="value">
+      0
+    </text>
+
+    <circle cx="8" cy="140" r="4" fill="#58A6FF"/>
+    <text x="24" y="145" class="label">Followers</text>
+    <text x="330" y="145" text-anchor="end" class="value">
+      2
+    </text>
+  </g>
+
+  <line x1="450"
+        y1="88"
+        x2="450"
+        y2="258"
+        stroke="#30363D"/>
+
+  <!-- Languages -->
+
+  <g transform="translate(486,88)">
+    <text x="0" y="0" class="section">Most Used Languages</text>
+
+    <rect x="0"
+          y="50"
+          width="378"
+          height="12"
+          rx="6"
+          fill="#21262D"/>
+
+    <rect x="0.00" y="50" width="378.00" height="12" fill="#3572A5" />
+
+            <circle cx="5" cy="86" r="5"
+                    fill="#3572A5" />
+            <text x="18" y="90" class="label">
+              Python
+            </text>
+            <text x="378" y="90" text-anchor="end"
+                  class="value">
+              100.0%
+            </text>
+            
+  </g>
+
+  <line x1="36"
+        y1="280"
+        x2="864"
+        y2="280"
+        stroke="#30363D"/>
+
+  <!-- Bottom metrics -->
+
+  <g transform="translate(0,300)">
+    <line x1="300"
+          y1="0"
+          x2="300"
+          y2="58"
+          stroke="#30363D"/>
+
+    <line x1="600"
+          y1="0"
+          x2="600"
+          y2="58"
+          stroke="#30363D"/>
+
+    <text x="150" y="25" text-anchor="middle" class="big">
+      203
+    </text>
+
+    <text x="150" y="48" text-anchor="middle" class="muted">
+      Total contributions
+    </text>
+
+    <circle cx="450"
+            cy="20"
+            r="27"
+            fill="none"
+            stroke="#30363D"
+            stroke-width="5"/>
+
+    <circle cx="450"
+            cy="20"
+            r="27"
+            fill="none"
+            stroke="#58A6FF"
+            stroke-width="5"
+            stroke-linecap="round"
+            stroke-dasharray="110 60"
+            transform="rotate(-90 450 20)"/>
+
+    <text x="450" y="27" text-anchor="middle" class="big">
+      5
+    </text>
+
+    <text x="450" y="48" text-anchor="middle" class="muted">
+      Current streak
+    </text>
+
+    <text x="750" y="25" text-anchor="middle" class="big">
+      7
+    </text>
+
+    <text x="750" y="48" text-anchor="middle" class="muted">
+      Longest streak
+    </text>
+  </g>
+
+  <text x="864"
+        y="378"
+        text-anchor="end"
+        class="muted">
+    Updated 2026-08-01 10:42 UTC
+  </text>
+</svg>
