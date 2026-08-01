@@ -780,7 +780,7 @@ def build_svg(
     stats: dict[str, Any],
 ) -> str:
     width = 1000
-    height = 460
+    height = 340
 
     left_x = 34
     left_value_x = 455
@@ -789,15 +789,15 @@ def build_svg(
     title_y = 56
 
     row_y = [
-        112,
-        154,
-        196,
-        238,
-        280,
+        92,
+        120,
+        148,
+        176,
+        204,
     ]
 
     bar_x = right_x
-    bar_y = 117
+    bar_y = 98
     bar_width = 405
     bar_height = 7
 
