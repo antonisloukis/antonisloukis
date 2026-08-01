@@ -79,14 +79,14 @@ A command-line tool that analyzes text files and prints word and character stati
 
 
 ### ◫ Development Metrics
+
 <p align="center">
   <img
     src="./assets/github-activity.svg"
-    width="100%"
+    width="88%"
     alt="Automatically updated GitHub activity"
   />
 </p>
-
 
 
 
