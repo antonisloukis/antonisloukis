@@ -80,9 +80,16 @@ A command-line tool that analyzes text files and prints word and character stati
 
 ### ◫ GitHub Activity
 
+<h3 align="center">◈ GitHub Activity</h3>
+
 <p align="center">
-  <img height="125" src="https://github-readme-stats.vercel.app/api?username=antonisloukis&show_icons=true&hide_title=true&hide_border=true&theme=transparent" alt="GitHub statistics" />
-  <img height="125" src="https://github-readme-stats.vercel.app/api/top-langs/?username=antonisloukis&layout=compact&langs_count=6&hide_title=true&hide_border=true&theme=transparent" alt="Most used languages" />
+  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=antonisloukis&show_icons=true&hide_border=true&theme=github_dark&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9&bg_color=00000000" />
+
+  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=antonisloukis&layout=compact&hide_border=true&theme=github_dark&title_color=58A6FF&text_color=C9D1D9&bg_color=00000000" />
+</p>
+
+<p align="center">
+  <img width="50%" src="https://streak-stats.demolab.com?user=antonisloukis&theme=github-dark-blue&hide_border=true&background=00000000&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF" />
 </p>
 
 
