@@ -83,7 +83,7 @@ A command-line tool that analyzes text files and prints word and character stati
 <p align="center">
   <img
     src="./assets/github-activity.svg"
-    width="95%"
+    width="100%"
     alt="Automatically updated GitHub activity"
   />
 </p>
