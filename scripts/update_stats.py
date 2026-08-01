@@ -226,8 +226,8 @@ def calculate_streaks(
         timezone.utc
     ).date()
 
-    # A streak remains current when the latest
-    # contribution was made yesterday.
+    # Keep yesterday's streak active when there
+    # has not been a contribution today yet.
     if counts.get(cursor, 0) == 0:
         cursor -= timedelta(days=1)
 
@@ -350,9 +350,7 @@ def fetch_stats() -> dict[str, Any]:
     total_contributions = 0
     contributed_this_year = 0
 
-    all_days: list[
-        dict[str, Any]
-    ] = []
+    all_days: list[dict[str, Any]] = []
 
     for year in years:
         start, end = contribution_period(
@@ -433,12 +431,8 @@ def fetch_stats() -> dict[str, Any]:
         "total_contributions": (
             total_contributions
         ),
-        "current_streak": (
-            current_streak
-        ),
-        "longest_streak": (
-            longest_streak
-        ),
+        "current_streak": current_streak,
+        "longest_streak": longest_streak,
         "languages": collect_languages(
             repositories
         ),
@@ -483,23 +477,9 @@ ICON_PATHS = {
     """,
 
     "pr": """
-      <circle
-        cx="7"
-        cy="5"
-        r="2"
-      />
-
-      <circle
-        cx="17"
-        cy="19"
-        r="2"
-      />
-
-      <circle
-        cx="17"
-        cy="5"
-        r="2"
-      />
+      <circle cx="7" cy="5" r="2"/>
+      <circle cx="17" cy="19" r="2"/>
+      <circle cx="17" cy="5" r="2"/>
 
       <path
         d="
@@ -521,11 +501,7 @@ ICON_PATHS = {
     """,
 
     "issue": """
-      <circle
-        cx="12"
-        cy="12"
-        r="8"
-      />
+      <circle cx="12" cy="12" r="8"/>
 
       <path
         d="
@@ -567,17 +543,8 @@ ICON_PATHS = {
     """,
 
     "people": """
-      <circle
-        cx="9"
-        cy="9"
-        r="2.3"
-      />
-
-      <circle
-        cx="15"
-        cy="9"
-        r="2.3"
-      />
+      <circle cx="9" cy="9" r="2.3"/>
+      <circle cx="15" cy="9" r="2.3"/>
 
       <path
         d="
@@ -934,7 +901,7 @@ def build_svg(
   <style>
     .section-title {{
       font:
-        700 27px
+        400 18px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -946,7 +913,7 @@ def build_svg(
     .stat-label,
     .stat-value {{
       font:
-        700 20px
+        700 14px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -957,7 +924,7 @@ def build_svg(
 
     .legend-label {{
       font:
-        700 17px
+        400 12px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -968,7 +935,7 @@ def build_svg(
 
     .legend-value {{
       font:
-        700 16px
+        700 12px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -979,7 +946,7 @@ def build_svg(
 
     .metric-number {{
       font:
-        800 40px
+        800 30px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -990,7 +957,7 @@ def build_svg(
 
     .metric-label {{
       font:
-        600 17px
+        600 12px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -1001,7 +968,7 @@ def build_svg(
 
     .updated {{
       font:
-        400 13px
+        400 9px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -1032,8 +999,6 @@ def build_svg(
     Most Used Languages
   </text>
 
-  <!-- Internal vertical divider only -->
-
   <line
     x1="500"
     y1="34"
@@ -1044,8 +1009,6 @@ def build_svg(
   />
 
   {rows}
-
-  <!-- Rounded segmented language bar -->
 
   <rect
     x="{bar_x}"
@@ -1061,8 +1024,6 @@ def build_svg(
   </g>
 
   {language_legend}
-
-  <!-- Bottom vertical separators -->
 
   <line
     x1="333"
