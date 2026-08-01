@@ -22,7 +22,7 @@ BG = "#0d1117"
 BLUE = "#58a6ff"
 WHITE = "#e6edf3"
 MUTED = "#8b949e"
-LINE = "#30363d"
+LINE = "#21262d"
 
 
 PROFILE_QUERY = """
@@ -958,7 +958,7 @@ def build_svg(
 
     .metric-label {{
       font:
-        600 12px
+        600 13px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -969,7 +969,7 @@ def build_svg(
 
     .updated {{
       font:
-        400 11px
+        400 10px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -1006,7 +1006,7 @@ def build_svg(
     x2="500"
     y2="218"
     stroke="{LINE}"
-    stroke-width="1.5"
+    stroke-width="1"
   />
 
   {rows}
@@ -1032,7 +1032,7 @@ def build_svg(
     x2="333"
     y2="315"
     stroke="{LINE}"
-    stroke-width="2"
+    stroke-width="1"
   />
 
   <line
@@ -1041,14 +1041,14 @@ def build_svg(
     x2="667"
     y2="315"
     stroke="{LINE}"
-    stroke-width="2"
+    stroke-width="1"
   />
 
   {icon(
     "people",
     155,
     226,
-    1.35,
+    1.5,
 )}
 
   <text
@@ -1071,7 +1071,7 @@ def build_svg(
     "flame",
     488,
     226,
-    1.35,
+    1.5,
 )}
 
   <text
@@ -1094,7 +1094,7 @@ def build_svg(
     "trophy",
     822,
     226,
-    1.35,
+    1.5,
 )}
 
   <text
@@ -1115,7 +1115,7 @@ def build_svg(
 
   <text
     x="958"
-    y="330"
+    y="327"
     text-anchor="end"
     class="updated">
     Updated {esc(updated)}
