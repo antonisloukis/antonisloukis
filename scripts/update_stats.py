@@ -969,7 +969,7 @@ def build_svg(
 
     .updated {{
       font:
-        400 10px
+        400 11px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -987,7 +987,7 @@ def build_svg(
   />
 
   <text
-    x="{left_x}"
+    x="{left_x + 1}"
     y="{title_y}"
     class="section-title">
     GitHub Stats
