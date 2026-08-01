@@ -136,7 +136,7 @@ for name, size in sorted(
         )
     )
 
-    return {
+        return {
         "public_repos": public_repos,
         "followers": followers,
         "total_stars": total_stars,
