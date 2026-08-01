@@ -86,7 +86,7 @@
 
     .metric-label {
       font:
-        600 12px
+        600 13px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -97,7 +97,7 @@
 
     .updated {
       font:
-        400 11px
+        400 10px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -133,8 +133,8 @@
     y1="34"
     x2="500"
     y2="218"
-    stroke="#30363d"
-    stroke-width="1.5"
+    stroke="#21262d"
+    stroke-width="1"
   />
 
   
@@ -226,7 +226,7 @@
       y="120"
       text-anchor="end"
       class="stat-value">
-      206
+      207
     </text>
     
 
@@ -376,7 +376,7 @@
       y="204"
       text-anchor="end"
       class="stat-value">
-      217
+      218
     </text>
     
 
@@ -430,8 +430,8 @@
     y1="232"
     x2="333"
     y2="315"
-    stroke="#30363d"
-    stroke-width="2"
+    stroke="#21262d"
+    stroke-width="1"
   />
 
   <line
@@ -439,13 +439,13 @@
     y1="232"
     x2="667"
     y2="315"
-    stroke="#30363d"
-    stroke-width="2"
+    stroke="#21262d"
+    stroke-width="1"
   />
 
   
     <g
-      transform="translate(155,226) scale(1.35)"
+      transform="translate(155,226) scale(1.5)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -483,7 +483,7 @@
     y="278"
     text-anchor="middle"
     class="metric-number">
-    217
+    218
   </text>
 
   <text
@@ -496,7 +496,7 @@
 
   
     <g
-      transform="translate(488,226) scale(1.35)"
+      transform="translate(488,226) scale(1.5)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -542,7 +542,7 @@
 
   
     <g
-      transform="translate(822,226) scale(1.35)"
+      transform="translate(822,226) scale(1.5)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -605,9 +605,9 @@
 
   <text
     x="958"
-    y="330"
+    y="327"
     text-anchor="end"
     class="updated">
-    Updated 2026-08-01 19:41 UTC
+    Updated 2026-08-01 20:10 UTC
   </text>
 </svg>
