@@ -1,546 +1,1192 @@
-import os
+from __future__ import annotations
+
+import html
 import json
+import os
+import sys
+import urllib.error
 import urllib.request
-from datetime import datetime
+from collections import Counter
+from datetime import date, datetime, timedelta, timezone
+from pathlib import Path
+from typing import Any
 
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+
+GRAPHQL_URL = "https://api.github.com/graphql"
+OUTPUT_PATH = Path("assets/github-activity.svg")
+
 USERNAME = os.getenv("GITHUB_USERNAME", "antonisloukis")
-
-OUTPUT_PATH = "assets/github-activity.svg"
+TOKEN = os.getenv("GITHUB_TOKEN")
 
 BG = "#0d1117"
 BLUE = "#58a6ff"
 WHITE = "#e6edf3"
 MUTED = "#8b949e"
-LINE = "#21262d"
+LINE = "#30363d"
 
 
-def graphql_query(query, variables=None):
-    data = json.dumps({
-        "query": query,
-        "variables": variables or {}
-    }).encode("utf-8")
+PROFILE_QUERY = """
+query Profile($login: String!) {
+  user(login: $login) {
+    pullRequests(first: 1) {
+      totalCount
+    }
 
-    req = urllib.request.Request(
-        "https://api.github.com/graphql",
-        data=data,
-        headers={
-            "Authorization": f"Bearer {GITHUB_TOKEN}",
-            "Content-Type": "application/json",
-            "User-Agent": USERNAME,
-        },
+    issues(first: 1) {
+      totalCount
+    }
+
+    contributionsCollection {
+      contributionYears
+    }
+
+    repositories(
+      first: 100
+      ownerAffiliations: OWNER
+      privacy: PUBLIC
+      isFork: false
+      orderBy: {
+        field: UPDATED_AT
+        direction: DESC
+      }
+    ) {
+      nodes {
+        stargazerCount
+
+        languages(
+          first: 20
+          orderBy: {
+            field: SIZE
+            direction: DESC
+          }
+        ) {
+          edges {
+            size
+
+            node {
+              name
+              color
+            }
+          }
+        }
+      }
+    }
+  }
+}
+"""
+
+
+CONTRIBUTIONS_QUERY = """
+query Contributions(
+  $login: String!
+  $from: DateTime!
+  $to: DateTime!
+) {
+  user(login: $login) {
+    contributionsCollection(
+      from: $from
+      to: $to
+    ) {
+      totalCommitContributions
+
+      contributionCalendar {
+        totalContributions
+
+        weeks {
+          contributionDays {
+            date
+            contributionCount
+          }
+        }
+      }
+    }
+  }
+}
+"""
+
+
+def esc(value: object) -> str:
+    return html.escape(str(value), quote=True)
+
+
+def graphql_request(
+    query: str,
+    variables: dict[str, Any],
+) -> dict[str, Any]:
+    if not TOKEN:
+        raise RuntimeError("GITHUB_TOKEN is missing.")
+
+    payload = json.dumps(
+        {
+            "query": query,
+            "variables": variables,
+        }
+    ).encode("utf-8")
+
+    request = urllib.request.Request(
+        GRAPHQL_URL,
+        data=payload,
         method="POST",
+        headers={
+            "Authorization": f"Bearer {TOKEN}",
+            "Content-Type": "application/json",
+            "User-Agent": "antonisloukis-profile-stats",
+        },
     )
 
-    with urllib.request.urlopen(req) as response:
-        result = json.loads(response.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(
+            request,
+            timeout=30,
+        ) as response:
+            result = json.loads(
+                response.read().decode("utf-8")
+            )
 
-    if "errors" in result:
-        raise Exception(result["errors"])
+    except urllib.error.HTTPError as error:
+        body = error.read().decode(
+            "utf-8",
+            errors="replace",
+        )
+
+        raise RuntimeError(
+            f"GitHub API returned HTTP "
+            f"{error.code}: {body}"
+        ) from error
+
+    except urllib.error.URLError as error:
+        raise RuntimeError(
+            f"Could not contact GitHub API: {error}"
+        ) from error
+
+    if result.get("errors"):
+        raise RuntimeError(
+            f"GraphQL errors: {result['errors']}"
+        )
 
     return result["data"]
 
 
-def rest_get(url):
-    req = urllib.request.Request(
-        url,
-        headers={
-            "Authorization": f"Bearer {GITHUB_TOKEN}",
-            "Accept": "application/vnd.github+json",
-            "User-Agent": USERNAME,
-        },
-    )
-    with urllib.request.urlopen(req) as response:
-        return json.loads(response.read().decode("utf-8"))
-
-
-def get_profile_data():
-    query = """
-    query($login: String!) {
-      user(login: $login) {
-        followers {
-          totalCount
-        }
-        repositories(ownerAffiliations: OWNER, isFork: false, first: 100, privacy: PUBLIC) {
-          totalCount
-          nodes {
-            stargazerCount
-            languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
-              edges {
-                size
-                node {
-                  name
-                  color
-                }
-              }
-            }
-          }
-        }
-        contributionsCollection {
-          contributionCalendar {
-            totalContributions
-          }
-          totalPullRequestContributions
-          totalIssueContributions
-          totalCommitContributions
-        }
-      }
-    }
-    """
-
-    data = graphql_query(query, {"login": USERNAME})
-    user = data["user"]
-
-    repos = user["repositories"]["nodes"]
-    public_repos = user["repositories"]["totalCount"]
-    followers = user["followers"]["totalCount"]
-
-    total_stars = sum(repo["stargazerCount"] for repo in repos)
-
-    contributions = user["contributionsCollection"]["contributionCalendar"]["totalContributions"]
-    total_prs = user["contributionsCollection"]["totalPullRequestContributions"]
-    total_issues = user["contributionsCollection"]["totalIssueContributions"]
-    total_commits = user["contributionsCollection"]["totalCommitContributions"]
-
-    language_sizes = {}
-language_colors = {}
-
-for repo in repos:
-    for edge in repo["languages"]["edges"]:
-        name = edge["node"]["name"]
-        size = edge["size"]
-        color = edge["node"].get("color") or BLUE
-
-        language_sizes[name] = language_sizes.get(name, 0) + size
-        language_colors[name] = color
-
-total_language_size = sum(language_sizes.values()) or 1
-
-languages = []
-
-for name, size in sorted(
-    language_sizes.items(),
-    key=lambda item: item[1],
-    reverse=True,
-)[:6]:
-    percentage = round(
-        (size / total_language_size) * 100,
+def contribution_period(
+    year: int,
+    now: datetime,
+) -> tuple[str, str]:
+    start = datetime(
+        year,
         1,
+        1,
+        tzinfo=timezone.utc,
     )
 
-    languages.append(
-        (
-            name,
-            percentage,
-            language_colors[name],
+    if year == now.year:
+        end = now
+    else:
+        end = datetime(
+            year,
+            12,
+            31,
+            23,
+            59,
+            59,
+            tzinfo=timezone.utc,
         )
-    )
 
-        return {
-        "public_repos": public_repos,
-        "followers": followers,
-        "total_stars": total_stars,
-        "total_commits": total_commits,
-        "total_prs": total_prs,
-        "total_issues": total_issues,
-        "contributed_this_year": contributions,
-        "languages": languages,
-    }
+    return start.isoformat(), end.isoformat()
 
 
-def get_longest_streak_and_current_streak():
-    # Using GitHub contributions GraphQL via contribution calendar weeks
-    query = """
-    query($login: String!) {
-      user(login: $login) {
-        contributionsCollection {
-          contributionCalendar {
-            weeks {
-              contributionDays {
-                date
-                contributionCount
-              }
-            }
-          }
-        }
-      }
-    }
-    """
+def calculate_streaks(
+    contribution_days: list[dict[str, Any]],
+) -> tuple[int, int]:
+    counts: dict[date, int] = {}
 
-    data = graphql_query(query, {"login": USERNAME})
-    weeks = data["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
+    for item in contribution_days:
+        current_date = datetime.strptime(
+            item["date"],
+            "%Y-%m-%d",
+        ).date()
 
-    days = []
-    for week in weeks:
-        for day in week["contributionDays"]:
-            days.append(day)
+        counts[current_date] = int(
+            item["contributionCount"]
+        )
 
-    days.sort(key=lambda d: d["date"])
+    if not counts:
+        return 0, 0
 
     longest = 0
+    running = 0
+
+    for current_date in sorted(counts):
+        if counts[current_date] > 0:
+            running += 1
+            longest = max(longest, running)
+        else:
+            running = 0
+
+    cursor = datetime.now(
+        timezone.utc
+    ).date()
+
+    # A streak remains current when the latest
+    # contribution was made yesterday.
+    if counts.get(cursor, 0) == 0:
+        cursor -= timedelta(days=1)
+
     current = 0
-    temp = 0
 
-    for day in days:
-        if day["contributionCount"] > 0:
-            temp += 1
-            longest = max(longest, temp)
-        else:
-            temp = 0
-
-    for day in reversed(days):
-        if day["contributionCount"] > 0:
-            current += 1
-        else:
-            break
+    while counts.get(cursor, 0) > 0:
+        current += 1
+        cursor -= timedelta(days=1)
 
     return current, longest
 
 
-def esc(text):
-    return (
-        str(text)
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-    )
+def collect_languages(
+    repositories: list[dict[str, Any]],
+) -> list[tuple[str, float, str]]:
+    sizes: Counter[str] = Counter()
+    colors: dict[str, str] = {}
 
+    for repository in repositories:
+        language_edges = repository[
+            "languages"
+        ]["edges"]
 
-def icon_star(x, y, color):
-    return f'''
-    <g transform="translate({x},{y}) scale(0.95)">
-      <path d="M12 2.5l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 16.8 6.4 19.7l1.1-6.2L3 9.1l6.2-.9L12 2.5z"
-            fill="none" stroke="{color}" stroke-width="1.8" stroke-linejoin="round"/>
-    </g>
-    '''
+        for edge in language_edges:
+            name = edge["node"]["name"]
+            size = int(edge["size"])
 
+            color = (
+                edge["node"].get("color")
+                or BLUE
+            )
 
-def icon_commit(x, y, color):
-    return f'''
-    <g transform="translate({x},{y}) scale(0.95)">
-      <path d="M12 4a8 8 0 1 1-5.7 2.3" fill="none" stroke="{color}" stroke-width="1.8" stroke-linecap="round"/>
-      <path d="M4.2 3.8H8v3.8" fill="none" stroke="{color}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
-    '''
+            sizes[name] += size
+            colors[name] = color
 
+    total = sum(sizes.values())
 
-def icon_pr(x, y, color):
-    return f'''
-    <g transform="translate({x},{y}) scale(0.95)">
-      <circle cx="7" cy="5" r="2" fill="none" stroke="{color}" stroke-width="1.8"/>
-      <circle cx="17" cy="19" r="2" fill="none" stroke="{color}" stroke-width="1.8"/>
-      <circle cx="17" cy="5" r="2" fill="none" stroke="{color}" stroke-width="1.8"/>
-      <path d="M7 7v10a2 2 0 0 0 2 2h6" fill="none" stroke="{color}" stroke-width="1.8" stroke-linecap="round"/>
-      <path d="M15 5h-4a2 2 0 0 0-2 2v2" fill="none" stroke="{color}" stroke-width="1.8" stroke-linecap="round"/>
-    </g>
-    '''
+    if total <= 0:
+        return []
 
+    ranked = sizes.most_common()
 
-def icon_issue(x, y, color):
-    return f'''
-    <g transform="translate({x},{y}) scale(0.95)">
-      <circle cx="12" cy="12" r="8" fill="none" stroke="{color}" stroke-width="1.8"/>
-      <path d="M12 7.5v5" stroke="{color}" stroke-width="1.8" stroke-linecap="round"/>
-      <circle cx="12" cy="15.8" r="1" fill="{color}"/>
-    </g>
-    '''
-
-
-def icon_calendar(x, y, color):
-    return f'''
-    <g transform="translate({x},{y}) scale(0.95)">
-      <rect x="4" y="6" width="16" height="14" rx="1.8" fill="none" stroke="{color}" stroke-width="1.8"/>
-      <path d="M4 10h16" stroke="{color}" stroke-width="1.8"/>
-      <path d="M8 3.8v4M16 3.8v4" stroke="{color}" stroke-width="1.8" stroke-linecap="round"/>
-    </g>
-    '''
-
-
-def icon_people(x, y, color):
-    return f'''
-    <g transform="translate({x},{y}) scale(0.95)">
-      <circle cx="9" cy="9" r="2.3" fill="none" stroke="{color}" stroke-width="1.6"/>
-      <circle cx="15" cy="9" r="2.3" fill="none" stroke="{color}" stroke-width="1.6"/>
-      <path d="M5.5 18c.8-2.6 2.6-4 5.5-4s4.7 1.4 5.5 4" fill="none" stroke="{color}" stroke-width="1.6" stroke-linecap="round"/>
-      <path d="M2.8 18c.6-1.8 1.7-2.8 3.2-3.3M21.2 18c-.6-1.8-1.7-2.8-3.2-3.3" fill="none" stroke="{color}" stroke-width="1.6" stroke-linecap="round"/>
-    </g>
-    '''
-
-
-def icon_flame(x, y, color):
-    return f'''
-    <g transform="translate({x},{y}) scale(0.95)">
-      <path d="M12 3.5c1.5 2.3 3.8 4 3.8 7.1A3.8 3.8 0 1 1 8.2 11c0-1.9 1-3.4 2.4-4.8.2 1.6.9 2.7 1.4 3.2.8-1.1 1-2.7 0-5.9z"
-            fill="none" stroke="{color}" stroke-width="1.8" stroke-linejoin="round"/>
-    </g>
-    '''
-
-
-def icon_trophy(x, y, color):
-    return f'''
-    <g transform="translate({x},{y}) scale(0.95)">
-      <path d="M8 5h8v3a4 4 0 0 1-8 0V5z" fill="none" stroke="{color}" stroke-width="1.8"/>
-      <path d="M6 6H4a2 2 0 0 0 2 3M18 6h2a2 2 0 0 1-2 3" fill="none" stroke="{color}" stroke-width="1.8" stroke-linecap="round"/>
-      <path d="M12 12v4M9 20h6" stroke="{color}" stroke-width="1.8" stroke-linecap="round"/>
-    </g>
-    '''
-
-
-def build_svg(stats, current_streak, longest_streak):
-    width = 1000
-    height = 460
-
-    x0 = 28
-    left_w = 460
-    right_x = 520
-    right_w = 452
-
-    lang_title_y = 88
-    list_start_y = 128
-    row_gap = 42
-
-    updated = datetime.utcnow().strftime(
-        "%Y-%m-%d %H:%M UTC"
-    )
-
-    language_bar_y = 170
-    language_bar_x = right_x + 24
-    language_bar_w = 360
-    language_bar_h = 8
-
-    # GitHub statistics
-    total_commits = stats["total_commits"]
-    total_prs = stats["total_prs"]
-    total_issues = stats["total_issues"]
-    total_stars = stats["total_stars"]
-    contributed_this_year = stats["contributed_this_year"]
-
-    # Support up to six languages
-    raw_languages = stats.get("languages", [])[:6]
-    languages = []
-
-    for language in raw_languages:
-        # Supports both old two-value tuples and new
-        # three-value tuples containing the GitHub color.
-        if len(language) == 3:
-            name, percentage, color = language
-        else:
-            name, percentage = language
-            color = BLUE
-
-        languages.append(
+    if len(ranked) <= 6:
+        displayed = [
             (
                 name,
-                float(percentage),
-                color or BLUE,
+                size,
+                colors[name],
+            )
+            for name, size in ranked
+        ]
+
+    else:
+        displayed = [
+            (
+                name,
+                size,
+                colors[name],
+            )
+            for name, size in ranked[:5]
+        ]
+
+        other_size = sum(
+            size
+            for _, size in ranked[5:]
+        )
+
+        displayed.append(
+            (
+                "Other",
+                other_size,
+                MUTED,
             )
         )
 
-    if not languages:
-        languages = [
-            ("No data", 100.0, MUTED)
+    return [
+        (
+            name,
+            size / total * 100,
+            color,
+        )
+        for name, size, color in displayed
+    ]
+
+
+def fetch_stats() -> dict[str, Any]:
+    now = datetime.now(timezone.utc)
+
+    profile = graphql_request(
+        PROFILE_QUERY,
+        {
+            "login": USERNAME,
+        },
+    )
+
+    user = profile.get("user")
+
+    if user is None:
+        raise RuntimeError(
+            f"GitHub user '{USERNAME}' "
+            "was not found."
+        )
+
+    repositories = user[
+        "repositories"
+    ]["nodes"]
+
+    years = sorted(
+        set(
+            user[
+                "contributionsCollection"
+            ]["contributionYears"]
+        )
+    )
+
+    if now.year not in years:
+        years.append(now.year)
+
+    total_commits = 0
+    total_contributions = 0
+    contributed_this_year = 0
+
+    all_days: list[
+        dict[str, Any]
+    ] = []
+
+    for year in years:
+        start, end = contribution_period(
+            year,
+            now,
+        )
+
+        contribution_data = graphql_request(
+            CONTRIBUTIONS_QUERY,
+            {
+                "login": USERNAME,
+                "from": start,
+                "to": end,
+            },
+        )
+
+        collection = contribution_data[
+            "user"
+        ]["contributionsCollection"]
+
+        calendar = collection[
+            "contributionCalendar"
         ]
 
-    language_segments = []
-    language_legend = []
+        total_commits += int(
+            collection[
+                "totalCommitContributions"
+            ]
+        )
 
-    segment_cursor = language_bar_x
+        total_contributions += int(
+            calendar[
+                "totalContributions"
+            ]
+        )
 
-    for index, (name, percentage, color) in enumerate(languages):
+        if year == now.year:
+            contributed_this_year = int(
+                calendar[
+                    "totalContributions"
+                ]
+            )
+
+        for week in calendar["weeks"]:
+            all_days.extend(
+                week["contributionDays"]
+            )
+
+    current_streak, longest_streak = (
+        calculate_streaks(all_days)
+    )
+
+    total_stars = sum(
+        int(
+            repository[
+                "stargazerCount"
+            ]
+        )
+        for repository in repositories
+    )
+
+    return {
+        "total_stars": total_stars,
+        "total_commits": total_commits,
+        "total_prs": int(
+            user[
+                "pullRequests"
+            ]["totalCount"]
+        ),
+        "total_issues": int(
+            user[
+                "issues"
+            ]["totalCount"]
+        ),
+        "contributed_this_year": (
+            contributed_this_year
+        ),
+        "total_contributions": (
+            total_contributions
+        ),
+        "current_streak": (
+            current_streak
+        ),
+        "longest_streak": (
+            longest_streak
+        ),
+        "languages": collect_languages(
+            repositories
+        ),
+    }
+
+
+ICON_PATHS = {
+    "star": """
+      <path
+        d="
+          M12 2.5
+          l2.8 5.7
+          6.2.9
+          -4.5 4.4
+          1.1 6.2
+          L12 16.8
+          6.4 19.7
+          l1.1-6.2
+          L3 9.1
+          l6.2-.9
+          L12 2.5
+          z
+        "
+      />
+    """,
+
+    "commit": """
+      <path
+        d="
+          M12 4
+          a8 8 0 1 1-5.7 2.3
+        "
+      />
+
+      <path
+        d="
+          M4.2 3.8
+          H8
+          v3.8
+        "
+      />
+    """,
+
+    "pr": """
+      <circle
+        cx="7"
+        cy="5"
+        r="2"
+      />
+
+      <circle
+        cx="17"
+        cy="19"
+        r="2"
+      />
+
+      <circle
+        cx="17"
+        cy="5"
+        r="2"
+      />
+
+      <path
+        d="
+          M7 7
+          v10
+          a2 2 0 0 0 2 2
+          h6
+        "
+      />
+
+      <path
+        d="
+          M15 5
+          h-4
+          a2 2 0 0 0-2 2
+          v2
+        "
+      />
+    """,
+
+    "issue": """
+      <circle
+        cx="12"
+        cy="12"
+        r="8"
+      />
+
+      <path
+        d="
+          M12 7.5
+          v5
+        "
+      />
+
+      <circle
+        cx="12"
+        cy="15.8"
+        r="1"
+        fill="#58a6ff"
+        stroke="none"
+      />
+    """,
+
+    "calendar": """
+      <rect
+        x="4"
+        y="6"
+        width="16"
+        height="14"
+        rx="1.8"
+      />
+
+      <path
+        d="
+          M4 10
+          h16
+
+          M8 3.8
+          v4
+
+          M16 3.8
+          v4
+        "
+      />
+    """,
+
+    "people": """
+      <circle
+        cx="9"
+        cy="9"
+        r="2.3"
+      />
+
+      <circle
+        cx="15"
+        cy="9"
+        r="2.3"
+      />
+
+      <path
+        d="
+          M5.5 18
+          c.8-2.6 2.6-4 5.5-4
+          s4.7 1.4 5.5 4
+        "
+      />
+
+      <path
+        d="
+          M2.8 18
+          c.6-1.8 1.7-2.8 3.2-3.3
+
+          M21.2 18
+          c-.6-1.8-1.7-2.8-3.2-3.3
+        "
+      />
+    """,
+
+    "flame": """
+      <path
+        d="
+          M12 3.5
+          c1.5 2.3 3.8 4 3.8 7.1
+
+          A3.8 3.8 0 1 1 8.2 11
+
+          c0-1.9 1-3.4 2.4-4.8
+
+          .2 1.6.9 2.7 1.4 3.2
+
+          .8-1.1 1-2.7 0-5.9
+          z
+        "
+      />
+    """,
+
+    "trophy": """
+      <path
+        d="
+          M8 5
+          h8
+          v3
+          a4 4 0 0 1-8 0
+          V5
+          z
+        "
+      />
+
+      <path
+        d="
+          M6 6
+          H4
+          a2 2 0 0 0 2 3
+
+          M18 6
+          h2
+          a2 2 0 0 1-2 3
+        "
+      />
+
+      <path
+        d="
+          M12 12
+          v4
+
+          M9 20
+          h6
+        "
+      />
+    """,
+}
+
+
+def icon(
+    name: str,
+    x: int,
+    y: int,
+) -> str:
+    return f"""
+    <g
+      transform="translate({x},{y})"
+      fill="none"
+      stroke="{BLUE}"
+      stroke-width="1.9"
+      stroke-linecap="round"
+      stroke-linejoin="round">
+
+      {ICON_PATHS[name]}
+
+    </g>
+    """
+
+
+def stat_row(
+    icon_name: str,
+    label: str,
+    value: int,
+    y: int,
+    left_x: int,
+    value_x: int,
+) -> str:
+    return f"""
+    {icon(
+        icon_name,
+        left_x,
+        y - 21,
+    )}
+
+    <text
+      x="{left_x + 38}"
+      y="{y}"
+      class="stat-label">
+      {esc(label)}
+    </text>
+
+    <text
+      x="{value_x}"
+      y="{y}"
+      text-anchor="end"
+      class="stat-value">
+      {value:,}
+    </text>
+    """
+
+
+def build_language_svg(
+    languages: list[
+        tuple[str, float, str]
+    ],
+    bar_x: int,
+    bar_y: int,
+    bar_width: int,
+    bar_height: int,
+) -> tuple[str, str]:
+    if not languages:
+        languages = [
+            (
+                "No data",
+                100.0,
+                MUTED,
+            )
+        ]
+
+    segments: list[str] = []
+    legend: list[str] = []
+
+    cursor = float(bar_x)
+
+    for index, (
+        name,
+        percentage,
+        color,
+    ) in enumerate(languages):
         if index == len(languages) - 1:
             segment_width = (
-                language_bar_x
-                + language_bar_w
-                - segment_cursor
+                bar_x
+                + bar_width
+                - cursor
             )
         else:
             segment_width = (
-                language_bar_w
+                bar_width
                 * percentage
                 / 100
             )
 
-        language_segments.append(
-            f'''
+        segments.append(
+            f"""
             <rect
-              x="{segment_cursor:.2f}"
-              y="{language_bar_y}"
-              width="{max(segment_width, 1.5):.2f}"
-              height="{language_bar_h}"
-              fill="{color}"
+              x="{cursor:.2f}"
+              y="{bar_y}"
+              width="{max(
+                  segment_width,
+                  1.5,
+              ):.2f}"
+              height="{bar_height}"
+              fill="{esc(color)}"
             />
-            '''
+            """
         )
 
-        segment_cursor += segment_width
+        cursor += segment_width
 
         column = index % 2
         row = index // 2
 
         legend_x = (
-            language_bar_x
-            + column * 190
+            bar_x
+            + column * 200
         )
 
         legend_y = (
-            language_bar_y
+            bar_y
             + 34
-            + row * 30
+            + row * 31
         )
 
-        percentage_x = legend_x + 165
-
-        language_legend.append(
-            f'''
+        legend.append(
+            f"""
             <circle
               cx="{legend_x + 5}"
               cy="{legend_y - 5}"
-              r="4.5"
-              fill="{color}"
+              r="4"
+              fill="{esc(color)}"
             />
 
             <text
               x="{legend_x + 17}"
               y="{legend_y}"
-              fill="{WHITE}"
-              font-family="Segoe UI, Arial, sans-serif"
-              font-size="17"
-              font-weight="700">
+              class="legend-label">
               {esc(name)}
             </text>
 
             <text
-              x="{percentage_x}"
+              x="{legend_x + 175}"
               y="{legend_y}"
               text-anchor="end"
-              fill="{WHITE}"
-              font-family="Segoe UI, Arial, sans-serif"
-              font-size="16"
-              font-weight="700">
+              class="legend-value">
               {percentage:.1f}%
             </text>
-            '''
+            """
         )
 
-    language_segments_svg = "\n".join(
-        language_segments
+    return (
+        "\n".join(segments),
+        "\n".join(legend),
     )
 
-    language_legend_svg = "\n".join(
-        language_legend
+
+def build_svg(
+    stats: dict[str, Any],
+) -> str:
+    width = 1000
+    height = 460
+
+    left_x = 34
+    left_value_x = 455
+    right_x = 535
+
+    title_y = 56
+
+    row_y = [
+        112,
+        154,
+        196,
+        238,
+        280,
+    ]
+
+    bar_x = right_x
+    bar_y = 117
+    bar_width = 405
+    bar_height = 7
+
+    (
+        language_segments,
+        language_legend,
+    ) = build_language_svg(
+        stats["languages"],
+        bar_x,
+        bar_y,
+        bar_width,
+        bar_height,
     )
 
-    total_commits = stats["total_commits"]
-    total_prs = stats["total_prs"]
-    total_issues = stats["total_issues"]
-    total_stars = stats["total_stars"]
-    contributed_this_year = stats["contributed_this_year"]
+    rows = "\n".join(
+        [
+            stat_row(
+                "star",
+                "Total Stars Earned:",
+                stats["total_stars"],
+                row_y[0],
+                left_x,
+                left_value_x,
+            ),
 
-    svg = f'''<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="{width}" height="{height}" rx="16" fill="{BG}"/>
+            stat_row(
+                "commit",
+                "Total Commits:",
+                stats["total_commits"],
+                row_y[1],
+                left_x,
+                left_value_x,
+            ),
 
-  <!-- Section title -->
-  <text x="0" y="0" fill="{WHITE}" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" visibility="hidden">Development Metrics</text>
+            stat_row(
+                "pr",
+                "Total PRs:",
+                stats["total_prs"],
+                row_y[2],
+                left_x,
+                left_value_x,
+            ),
 
-  <!-- Vertical divider -->
-  <line x1="500" y1="70" x2="500" y2="285" stroke="{LINE}" stroke-width="2"/>
+            stat_row(
+                "issue",
+                "Total Issues:",
+                stats["total_issues"],
+                row_y[3],
+                left_x,
+                left_value_x,
+            ),
 
-  <!-- GitHub Stats title -->
-  <text x="{x0}" y="60" fill="{BLUE}" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">GitHub Stats</text>
+            stat_row(
+                "calendar",
+                "Contributed (this year):",
+                stats[
+                    "contributed_this_year"
+                ],
+                row_y[4],
+                left_x,
+                left_value_x,
+            ),
+        ]
+    )
 
-  <!-- Most Used Languages title -->
-  <text x="{right_x + 24}" y="{lang_title_y}" fill="{BLUE}" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Most Used Languages</text>
+    updated = datetime.now(
+        timezone.utc
+    ).strftime(
+        "%Y-%m-%d %H:%M UTC"
+    )
 
-  <!-- Stats list -->
-  {icon_star(x0, list_start_y - 18, BLUE)}
-  <text x="{x0 + 36}" y="{list_start_y}" fill="{WHITE}" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Total Stars Earned:</text>
-  <text x="{left_w - 10}" y="{list_start_y}" text-anchor="end" fill="{WHITE}" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">{total_stars}</text>
+    return f"""<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="{width}"
+  height="{height}"
+  viewBox="0 0 {width} {height}"
+  role="img"
+  aria-labelledby="title description">
 
-  {icon_commit(x0, list_start_y + row_gap - 18, BLUE)}
-  <text x="{x0 + 36}" y="{list_start_y + row_gap}" fill="{WHITE}" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Total Commits:</text>
-  <text x="{left_w - 10}" y="{list_start_y + row_gap}" text-anchor="end" fill="{WHITE}" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">{total_commits}</text>
+  <title id="title">
+    {esc(USERNAME)} development metrics
+  </title>
 
-  {icon_pr(x0, list_start_y + row_gap*2 - 18, BLUE)}
-  <text x="{x0 + 36}" y="{list_start_y + row_gap*2}" fill="{WHITE}" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Total PRs:</text>
-  <text x="{left_w - 10}" y="{list_start_y + row_gap*2}" text-anchor="end" fill="{WHITE}" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">{total_prs}</text>
+  <desc id="description">
+    Automatically updated GitHub statistics,
+    language usage and streaks.
+  </desc>
 
-  {icon_issue(x0, list_start_y + row_gap*3 - 18, BLUE)}
-  <text x="{x0 + 36}" y="{list_start_y + row_gap*3}" fill="{WHITE}" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Total Issues:</text>
-  <text x="{left_w - 10}" y="{list_start_y + row_gap*3}" text-anchor="end" fill="{WHITE}" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">{total_issues}</text>
+  <defs>
+    <clipPath id="language-bar-clip">
+      <rect
+        x="{bar_x}"
+        y="{bar_y}"
+        width="{bar_width}"
+        height="{bar_height}"
+        rx="{bar_height / 2}"
+      />
+    </clipPath>
+  </defs>
 
-  {icon_calendar(x0, list_start_y + row_gap*4 - 18, BLUE)}
-  <text x="{x0 + 36}" y="{list_start_y + row_gap*4}" fill="{WHITE}" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Contributed this year:</text>
-  <text x="{left_w - 10}" y="{list_start_y + row_gap*4}" text-anchor="end" fill="{WHITE}" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">{contributed_this_year}</text>
+  <style>
+    .section-title {{
+      font:
+        700 27px
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
 
-  <!-- Languages -->
+      fill: {BLUE};
+    }}
+
+    .stat-label,
+    .stat-value {{
+      font:
+        700 20px
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      fill: {WHITE};
+    }}
+
+    .legend-label {{
+      font:
+        700 17px
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      fill: {WHITE};
+    }}
+
+    .legend-value {{
+      font:
+        700 16px
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      fill: {WHITE};
+    }}
+
+    .metric-number {{
+      font:
+        800 40px
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      fill: {BLUE};
+    }}
+
+    .metric-label {{
+      font:
+        600 17px
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      fill: {WHITE};
+    }}
+
+    .updated {{
+      font:
+        400 13px
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      fill: {MUTED};
+    }}
+  </style>
+
+  <rect
+    width="{width}"
+    height="{height}"
+    rx="16"
+    fill="{BG}"
+  />
+
+  <text
+    x="{left_x}"
+    y="{title_y}"
+    class="section-title">
+    GitHub Stats
+  </text>
+
+  <text
+    x="{right_x}"
+    y="{title_y}"
+    class="section-title">
+    Most Used Languages
+  </text>
+
+  <!-- Internal vertical divider only -->
+
+  <line
+    x1="500"
+    y1="34"
+    x2="500"
+    y2="302"
+    stroke="{LINE}"
+    stroke-width="1.5"
+  />
+
+  {rows}
+
   <!-- Rounded segmented language bar -->
 
-<defs>
-  <clipPath id="language-bar-clip">
-    <rect
-      x="{language_bar_x}"
-      y="{language_bar_y}"
-      width="{language_bar_w}"
-      height="{language_bar_h}"
-      rx="{language_bar_h / 2}"
-    />
-  </clipPath>
-</defs>
+  <rect
+    x="{bar_x}"
+    y="{bar_y}"
+    width="{bar_width}"
+    height="{bar_height}"
+    rx="{bar_height / 2}"
+    fill="#161b22"
+  />
 
-<rect
-  x="{language_bar_x}"
-  y="{language_bar_y}"
-  width="{language_bar_w}"
-  height="{language_bar_h}"
-  rx="{language_bar_h / 2}"
-  fill="#161b22"
-/>
+  <g clip-path="url(#language-bar-clip)">
+    {language_segments}
+  </g>
 
-<g clip-path="url(#language-bar-clip)">
-  {language_segments_svg}
-</g>
+  {language_legend}
 
-<!-- Language legend -->
+  <!-- Bottom vertical separators -->
 
-{language_legend_svg}
+  <line
+    x1="333"
+    y1="338"
+    x2="333"
+    y2="432"
+    stroke="{LINE}"
+    stroke-width="1.5"
+  />
 
-  <!-- Bottom metrics -->
-  <line x1="28" y1="332" x2="972" y2="332" stroke="{LINE}" stroke-width="2"/>
-  <line x1="333" y1="352" x2="333" y2="432" stroke="{LINE}" stroke-width="2"/>
-  <line x1="667" y1="352" x2="667" y2="432" stroke="{LINE}" stroke-width="2"/>
+  <line
+    x1="667"
+    y1="338"
+    x2="667"
+    y2="432"
+    stroke="{LINE}"
+    stroke-width="1.5"
+  />
 
-  {icon_people(150, 352, BLUE)}
-  <text x="166" y="410" text-anchor="middle" fill="{BLUE}" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="800">{contributed_this_year}</text>
-  <text x="166" y="438" text-anchor="middle" fill="{WHITE}" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Total contributions</text>
+  {icon(
+      "people",
+      155,
+      332,
+  )}
 
-  {icon_flame(484, 352, BLUE)}
-  <text x="500" y="410" text-anchor="middle" fill="{BLUE}" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="800">{current_streak}</text>
-  <text x="500" y="438" text-anchor="middle" fill="{WHITE}" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Current streak</text>
+  <text
+    x="167"
+    y="390"
+    text-anchor="middle"
+    class="metric-number">
+    {stats["total_contributions"]:,}
+  </text>
 
-  {icon_trophy(818, 352, BLUE)}
-  <text x="834" y="410" text-anchor="middle" fill="{BLUE}" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="800">{longest_streak}</text>
-  <text x="834" y="438" text-anchor="middle" fill="{WHITE}" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="600">Longest streak</text>
+  <text
+    x="167"
+    y="421"
+    text-anchor="middle"
+    class="metric-label">
+    Total contributions
+  </text>
 
-  <text x="952" y="438" text-anchor="end" fill="{MUTED}" font-family="Segoe UI, Arial, sans-serif" font-size="14">Updated {updated}</text>
-</svg>'''
-    return svg
+  {icon(
+      "flame",
+      488,
+      332,
+  )}
+
+  <text
+    x="500"
+    y="390"
+    text-anchor="middle"
+    class="metric-number">
+    {stats["current_streak"]}
+  </text>
+
+  <text
+    x="500"
+    y="421"
+    text-anchor="middle"
+    class="metric-label">
+    Current streak
+  </text>
+
+  {icon(
+      "trophy",
+      822,
+      332,
+  )}
+
+  <text
+    x="834"
+    y="390"
+    text-anchor="middle"
+    class="metric-number">
+    {stats["longest_streak"]}
+  </text>
+
+  <text
+    x="834"
+    y="421"
+    text-anchor="middle"
+    class="metric-label">
+    Longest streak
+  </text>
+
+  <text
+    x="958"
+    y="449"
+    text-anchor="end"
+    class="updated">
+    Updated {esc(updated)}
+  </text>
+</svg>
+"""
 
 
-def main():
-    if not GITHUB_TOKEN:
-        raise Exception("GITHUB_TOKEN is not set")
+def main() -> int:
+    try:
+        stats = fetch_stats()
 
-    stats = get_profile_data()
-    current_streak, longest_streak = get_longest_streak_and_current_streak()
+        OUTPUT_PATH.parent.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
 
-    svg = build_svg(stats, current_streak, longest_streak)
+        OUTPUT_PATH.write_text(
+            build_svg(stats),
+            encoding="utf-8",
+        )
 
-    os.makedirs("assets", exist_ok=True)
-    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        f.write(svg)
+        print(
+            f"Updated {OUTPUT_PATH}"
+        )
 
-    print(f"Saved {OUTPUT_PATH}")
+        return 0
+
+    except Exception as error:
+        print(
+            f"Error: {error}",
+            file=sys.stderr,
+        )
+
+        return 1
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
