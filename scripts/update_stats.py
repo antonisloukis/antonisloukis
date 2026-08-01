@@ -1046,7 +1046,7 @@ def build_svg(
 
   {icon(
     "people",
-    155,
+    149,
     226,
     1.5,
 )}
@@ -1069,7 +1069,7 @@ def build_svg(
 
   {icon(
     "flame",
-    488,
+    482,
     226,
     1.5,
 )}
@@ -1092,7 +1092,7 @@ def build_svg(
 
   {icon(
     "trophy",
-    822,
+    816,
     226,
     1.5,
 )}
