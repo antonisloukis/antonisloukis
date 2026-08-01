@@ -75,7 +75,7 @@
 
     .metric-number {
       font:
-        800 30px
+        700 24px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -97,7 +97,7 @@
 
     .updated {
       font:
-        400 9px
+        400 11px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -140,7 +140,7 @@
   
     
     <g
-      transform="translate(34,71)"
+      transform="translate(34,71) scale(1.0)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -187,7 +187,7 @@
 
     
     <g
-      transform="translate(34,99)"
+      transform="translate(34,99) scale(1.0)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -226,13 +226,13 @@
       y="120"
       text-anchor="end"
       class="stat-value">
-      205
+      206
     </text>
     
 
     
     <g
-      transform="translate(34,127)"
+      transform="translate(34,127) scale(1.0)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -284,7 +284,7 @@
 
     
     <g
-      transform="translate(34,155)"
+      transform="translate(34,155) scale(1.0)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -331,7 +331,7 @@
 
     
     <g
-      transform="translate(34,183)"
+      transform="translate(34,183) scale(1.0)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -376,7 +376,7 @@
       y="204"
       text-anchor="end"
       class="stat-value">
-      216
+      217
     </text>
     
 
@@ -427,11 +427,11 @@
 
   <line
     x1="333"
-    y1="338"
+    y1="232"
     x2="333"
-    y2="432"
+    y2="315"
     stroke="#30363d"
-    stroke-width="1.5"
+    stroke-width="2"
   />
 
   <line
@@ -440,12 +440,12 @@
     x2="667"
     y2="315"
     stroke="#30363d"
-    stroke-width="1.5"
+    stroke-width="2"
   />
 
   
     <g
-      transform="translate(155,226)"
+      transform="translate(155,226) scale(1.35)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -483,7 +483,7 @@
     y="278"
     text-anchor="middle"
     class="metric-number">
-    216
+    217
   </text>
 
   <text
@@ -496,7 +496,7 @@
 
   
     <g
-      transform="translate(488,226)"
+      transform="translate(488,226) scale(1.35)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -542,7 +542,7 @@
 
   
     <g
-      transform="translate(822,226)"
+      transform="translate(822,226) scale(1.35)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -608,6 +608,6 @@
     y="330"
     text-anchor="end"
     class="updated">
-    Updated 2026-08-01 18:56 UTC
+    Updated 2026-08-01 19:41 UTC
   </text>
 </svg>
