@@ -624,10 +624,11 @@ def icon(
     name: str,
     x: int,
     y: int,
+    scale: float = 1.0,
 ) -> str:
     return f"""
     <g
-      transform="translate({x},{y})"
+      transform="translate({x},{y}) scale({scale})"
       fill="none"
       stroke="{BLUE}"
       stroke-width="1.9"
@@ -946,7 +947,7 @@ def build_svg(
 
     .metric-number {{
       font:
-        800 30px
+        700 24px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -968,7 +969,7 @@ def build_svg(
 
     .updated {{
       font:
-        400 9px
+        400 11px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -1027,11 +1028,11 @@ def build_svg(
 
   <line
     x1="333"
-    y1="338"
+    y1="232"
     x2="333"
-    y2="432"
+    y2="315"
     stroke="{LINE}"
-    stroke-width="1.5"
+    stroke-width="2"
   />
 
   <line
@@ -1040,14 +1041,15 @@ def build_svg(
     x2="667"
     y2="315"
     stroke="{LINE}"
-    stroke-width="1.5"
+    stroke-width="2"
   />
 
   {icon(
-      "people",
-      155,
-      226,
-  )}
+    "people",
+    155,
+    226,
+    1.35,
+)}
 
   <text
     x="167"
@@ -1066,10 +1068,11 @@ def build_svg(
   </text>
 
   {icon(
-      "flame",
-      488,
-      226,
-  )}
+    "flame",
+    488,
+    226,
+    1.35,
+)}
 
   <text
     x="500"
@@ -1088,10 +1091,11 @@ def build_svg(
   </text>
 
   {icon(
-      "trophy",
-      822,
-      226,
-  )}
+    "trophy",
+    822,
+    226,
+    1.35,
+)}
 
   <text
     x="834"
