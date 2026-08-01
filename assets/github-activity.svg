@@ -30,7 +30,7 @@
   <style>
     .section-title {
       font:
-        700 27px
+        400 18px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -42,7 +42,7 @@
     .stat-label,
     .stat-value {
       font:
-        700 20px
+        700 14px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -53,7 +53,7 @@
 
     .legend-label {
       font:
-        700 17px
+        400 12px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -64,7 +64,7 @@
 
     .legend-value {
       font:
-        700 16px
+        700 12px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -75,7 +75,7 @@
 
     .metric-number {
       font:
-        800 40px
+        800 30px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -86,7 +86,7 @@
 
     .metric-label {
       font:
-        600 17px
+        600 12px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -97,7 +97,7 @@
 
     .updated {
       font:
-        400 13px
+        400 9px
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -127,8 +127,6 @@
     class="section-title">
     Most Used Languages
   </text>
-
-  <!-- Internal vertical divider only -->
 
   <line
     x1="500"
@@ -228,7 +226,7 @@
       y="154"
       text-anchor="end"
       class="stat-value">
-      199
+      200
     </text>
     
 
@@ -242,23 +240,9 @@
       stroke-linejoin="round">
 
       
-      <circle
-        cx="7"
-        cy="5"
-        r="2"
-      />
-
-      <circle
-        cx="17"
-        cy="19"
-        r="2"
-      />
-
-      <circle
-        cx="17"
-        cy="5"
-        r="2"
-      />
+      <circle cx="7" cy="5" r="2"/>
+      <circle cx="17" cy="19" r="2"/>
+      <circle cx="17" cy="5" r="2"/>
 
       <path
         d="
@@ -308,11 +292,7 @@
       stroke-linejoin="round">
 
       
-      <circle
-        cx="12"
-        cy="12"
-        r="8"
-      />
+      <circle cx="12" cy="12" r="8"/>
 
       <path
         d="
@@ -396,11 +376,9 @@
       y="280"
       text-anchor="end"
       class="stat-value">
-      210
+      211
     </text>
     
-
-  <!-- Rounded segmented language bar -->
 
   <rect
     x="535"
@@ -447,8 +425,6 @@
             </text>
             
 
-  <!-- Bottom vertical separators -->
-
   <line
     x1="333"
     y1="338"
@@ -477,17 +453,8 @@
       stroke-linejoin="round">
 
       
-      <circle
-        cx="9"
-        cy="9"
-        r="2.3"
-      />
-
-      <circle
-        cx="15"
-        cy="9"
-        r="2.3"
-      />
+      <circle cx="9" cy="9" r="2.3"/>
+      <circle cx="15" cy="9" r="2.3"/>
 
       <path
         d="
@@ -516,7 +483,7 @@
     y="390"
     text-anchor="middle"
     class="metric-number">
-    210
+    211
   </text>
 
   <text
@@ -641,6 +608,6 @@
     y="449"
     text-anchor="end"
     class="updated">
-    Updated 2026-08-01 14:08 UTC
+    Updated 2026-08-01 14:27 UTC
   </text>
 </svg>
