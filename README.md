@@ -81,11 +81,16 @@ A command-line tool that analyzes text files and prints word and character stati
 ### ◫ GitHub Activity
 
 <p align="center">
-  <img src="https://ghstats.dev/api/card?username=antonisloukis&hide_border=true&hide_title=true&border_radius=5&hide=stars%2Cprs%2Cissues%2Cfollowers%2Crepos%2Cactive_day%2Cavg%2Cweek%2Ctrend" alt="GitHub Stats Card" width="460" />
-</p>
-
-<p align="center">
-  <img src="https://ghstats.dev/api/langs?username=antonisloukis&hide_border=true&hide_title=true&border_radius=5&max_langs=4" alt="Top Languages" width="460" />
+  <img
+    src="<img src="https://github-readme-stats.vercel.app/api?username=antonisloukis&show_icons=true&hide_border=true&theme=transparent" />"
+    width="48%"
+    alt="GitHub statistics"
+  />
+  <img
+    src="<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antonisloukis&layout=compact&hide_border=true&theme=transparent" />"
+    width="48%"
+    alt="Most used languages"
+  />
 </p>
 
 
