@@ -79,7 +79,6 @@ A command-line tool that analyzes text files and prints word and character stati
 
 
 ### ◫ GitHub Activity
-
 <p align="center">
   <img
     src="./assets/github-activity.svg"
