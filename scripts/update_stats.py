@@ -299,111 +299,136 @@ def build_svg(stats, current_streak, longest_streak):
     list_start_y = 128
     row_gap = 42
 
-    updated = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+    updated = datetime.utcnow().strftime(
+        "%Y-%m-%d %H:%M UTC"
+    )
 
     language_bar_y = 170
     language_bar_x = right_x + 24
     language_bar_w = 360
     language_bar_h = 8
 
-    languages = stats["languages"][:6]
+    # GitHub statistics
+    total_commits = stats["total_commits"]
+    total_prs = stats["total_prs"]
+    total_issues = stats["total_issues"]
+    total_stars = stats["total_stars"]
+    contributed_this_year = stats["contributed_this_year"]
 
-if not languages:
-    languages = [
-        ("No data", 100.0, MUTED)
-    ]
+    # Support up to six languages
+    raw_languages = stats.get("languages", [])[:6]
+    languages = []
 
-language_segments = []
-language_legend = []
+    for language in raw_languages:
+        # Supports both old two-value tuples and new
+        # three-value tuples containing the GitHub color.
+        if len(language) == 3:
+            name, percentage, color = language
+        else:
+            name, percentage = language
+            color = BLUE
 
-segment_cursor = language_bar_x
+        languages.append(
+            (
+                name,
+                float(percentage),
+                color or BLUE,
+            )
+        )
 
-for index, (name, percentage, color) in enumerate(languages):
-    if index == len(languages) - 1:
-        segment_width = (
+    if not languages:
+        languages = [
+            ("No data", 100.0, MUTED)
+        ]
+
+    language_segments = []
+    language_legend = []
+
+    segment_cursor = language_bar_x
+
+    for index, (name, percentage, color) in enumerate(languages):
+        if index == len(languages) - 1:
+            segment_width = (
+                language_bar_x
+                + language_bar_w
+                - segment_cursor
+            )
+        else:
+            segment_width = (
+                language_bar_w
+                * percentage
+                / 100
+            )
+
+        language_segments.append(
+            f'''
+            <rect
+              x="{segment_cursor:.2f}"
+              y="{language_bar_y}"
+              width="{max(segment_width, 1.5):.2f}"
+              height="{language_bar_h}"
+              fill="{color}"
+            />
+            '''
+        )
+
+        segment_cursor += segment_width
+
+        column = index % 2
+        row = index // 2
+
+        legend_x = (
             language_bar_x
-            + language_bar_w
-            - segment_cursor
-        )
-    else:
-        segment_width = (
-            language_bar_w
-            * percentage
-            / 100
+            + column * 190
         )
 
-    language_segments.append(
-        f'''
-        <rect
-          x="{segment_cursor:.2f}"
-          y="{language_bar_y}"
-          width="{max(segment_width, 1.5):.2f}"
-          height="{language_bar_h}"
-          fill="{color}"
-        />
-        '''
+        legend_y = (
+            language_bar_y
+            + 34
+            + row * 30
+        )
+
+        percentage_x = legend_x + 165
+
+        language_legend.append(
+            f'''
+            <circle
+              cx="{legend_x + 5}"
+              cy="{legend_y - 5}"
+              r="4.5"
+              fill="{color}"
+            />
+
+            <text
+              x="{legend_x + 17}"
+              y="{legend_y}"
+              fill="{WHITE}"
+              font-family="Segoe UI, Arial, sans-serif"
+              font-size="17"
+              font-weight="700">
+              {esc(name)}
+            </text>
+
+            <text
+              x="{percentage_x}"
+              y="{legend_y}"
+              text-anchor="end"
+              fill="{WHITE}"
+              font-family="Segoe UI, Arial, sans-serif"
+              font-size="16"
+              font-weight="700">
+              {percentage:.1f}%
+            </text>
+            '''
+        )
+
+    language_segments_svg = "\n".join(
+        language_segments
     )
 
-    segment_cursor += segment_width
-
-    column = index % 2
-    row = index // 2
-
-    legend_x = (
-        language_bar_x
-        + column * 190
+    language_legend_svg = "\n".join(
+        language_legend
     )
-
-    legend_y = (
-        language_bar_y
-        + 34
-        + row * 30
-    )
-
-    percentage_x = (
-        legend_x
-        + 165
-    )
-
-    language_legend.append(
-        f'''
-        <circle
-          cx="{legend_x + 5}"
-          cy="{legend_y - 5}"
-          r="4.5"
-          fill="{color}"
-        />
-
-        <text
-          x="{legend_x + 17}"
-          y="{legend_y}"
-          fill="{WHITE}"
-          font-family="Segoe UI, Arial, sans-serif"
-          font-size="17"
-          font-weight="700">
-          {esc(name)}
-        </text>
-
-        <text
-          x="{percentage_x}"
-          y="{legend_y}"
-          text-anchor="end"
-          fill="{WHITE}"
-          font-family="Segoe UI, Arial, sans-serif"
-          font-size="16"
-          font-weight="700">
-          {percentage:.1f}%
-        </text>
-        '''
-    )
-
-language_segments_svg = "\n".join(
-    language_segments
-)
-
-language_legend_svg = "\n".join(
-    language_legend
-)
 
     total_commits = stats["total_commits"]
     total_prs = stats["total_prs"]
