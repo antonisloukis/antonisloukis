@@ -81,16 +81,8 @@ A command-line tool that analyzes text files and prints word and character stati
 ### ◫ GitHub Activity
 
 <p align="center">
-  <img
-    src="<img src="https://github-readme-stats.vercel.app/api?username=antonisloukis&show_icons=true&hide_border=true&theme=transparent" />"
-    width="48%"
-    alt="GitHub statistics"
-  />
-  <img
-    src="<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antonisloukis&layout=compact&hide_border=true&theme=transparent" />"
-    width="48%"
-    alt="Most used languages"
-  />
+  <img height="125" src="https://github-readme-stats.vercel.app/api?username=antonisloukis&show_icons=true&hide_title=true&hide_border=true&theme=transparent" alt="GitHub statistics" />
+  <img height="125" src="https://github-readme-stats.vercel.app/api/top-langs/?username=antonisloukis&layout=compact&langs_count=6&hide_title=true&hide_border=true&theme=transparent" alt="Most used languages" />
 </p>
 
 
