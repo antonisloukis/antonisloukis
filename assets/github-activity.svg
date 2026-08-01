@@ -1,8 +1,8 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="1000"
-  height="460"
-  viewBox="0 0 1000 460"
+  height="340"
+  viewBox="0 0 1000 340"
   role="img"
   aria-labelledby="title description">
 
@@ -19,7 +19,7 @@
     <clipPath id="language-bar-clip">
       <rect
         x="535"
-        y="117"
+        y="98"
         width="405"
         height="7"
         rx="3.5"
@@ -109,7 +109,7 @@
 
   <rect
     width="1000"
-    height="460"
+    height="340"
     rx="16"
     fill="#0d1117"
   />
@@ -140,7 +140,7 @@
   
     
     <g
-      transform="translate(34,91)"
+      transform="translate(34,71)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -171,23 +171,23 @@
 
     <text
       x="72"
-      y="112"
+      y="92"
       class="stat-label">
       Total Stars Earned:
     </text>
 
     <text
       x="455"
-      y="112"
+      y="92"
       text-anchor="end"
       class="stat-value">
-      6
+      10
     </text>
     
 
     
     <g
-      transform="translate(34,133)"
+      transform="translate(34,99)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -216,23 +216,23 @@
 
     <text
       x="72"
-      y="154"
+      y="120"
       class="stat-label">
       Total Commits:
     </text>
 
     <text
       x="455"
-      y="154"
+      y="120"
       text-anchor="end"
       class="stat-value">
-      203
+      204
     </text>
     
 
     
     <g
-      transform="translate(34,175)"
+      transform="translate(34,127)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -268,14 +268,14 @@
 
     <text
       x="72"
-      y="196"
+      y="148"
       class="stat-label">
       Total PRs:
     </text>
 
     <text
       x="455"
-      y="196"
+      y="148"
       text-anchor="end"
       class="stat-value">
       5
@@ -284,7 +284,7 @@
 
     
     <g
-      transform="translate(34,217)"
+      transform="translate(34,155)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -315,14 +315,14 @@
 
     <text
       x="72"
-      y="238"
+      y="176"
       class="stat-label">
       Total Issues:
     </text>
 
     <text
       x="455"
-      y="238"
+      y="176"
       text-anchor="end"
       class="stat-value">
       0
@@ -331,7 +331,7 @@
 
     
     <g
-      transform="translate(34,259)"
+      transform="translate(34,183)"
       fill="none"
       stroke="#58a6ff"
       stroke-width="1.9"
@@ -366,23 +366,23 @@
 
     <text
       x="72"
-      y="280"
+      y="204"
       class="stat-label">
       Contributed (this year):
     </text>
 
     <text
       x="455"
-      y="280"
+      y="204"
       text-anchor="end"
       class="stat-value">
-      214
+      215
     </text>
     
 
   <rect
     x="535"
-    y="117"
+    y="98"
     width="405"
     height="7"
     rx="3.5"
@@ -393,7 +393,7 @@
     
             <rect
               x="535.00"
-              y="117"
+              y="98"
               width="405.00"
               height="7"
               fill="#3572A5"
@@ -404,21 +404,21 @@
   
             <circle
               cx="540"
-              cy="146"
+              cy="127"
               r="4"
               fill="#3572A5"
             />
 
             <text
               x="552"
-              y="151"
+              y="132"
               class="legend-label">
               Python
             </text>
 
             <text
               x="710"
-              y="151"
+              y="132"
               text-anchor="end"
               class="legend-value">
               100.0%
@@ -483,7 +483,7 @@
     y="390"
     text-anchor="middle"
     class="metric-number">
-    214
+    215
   </text>
 
   <text
@@ -608,6 +608,6 @@
     y="449"
     text-anchor="end"
     class="updated">
-    Updated 2026-08-01 15:46 UTC
+    Updated 2026-08-01 18:28 UTC
   </text>
 </svg>
