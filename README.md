@@ -65,7 +65,7 @@ Python/Pygame implementation of the classic Asteroids arcade game.
 
 A Python AI coding agent with tool calling, safe file operations, and multi-step agent loops.
 
-**Stack:** Python
+**Stack:** Python · llm-agent
 
 </td>
 
