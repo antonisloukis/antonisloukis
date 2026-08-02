@@ -45,6 +45,7 @@
 
 
 #### Applications
+
 <table>
 <tr>
 
@@ -56,7 +57,6 @@ Python/Pygame implementation of the classic Asteroids arcade game.
 
 **Stack:** Python · Pygame
 
-
 </td>
 
 <td width="50%" valign="top">
@@ -67,6 +67,19 @@ A command-line tool that analyzes text files and prints word and character stati
 
 **Stack:** Python
 
+</td>
+
+</tr>
+
+<tr>
+
+<td colspan="2" width="100%" valign="top">
+
+### 📊 [Minimal GitHub Stats](https://github.com/antonisloukis/minimal-github-stats)
+
+Minimal, customizable GitHub profile statistics generated automatically with Python and GitHub Actions.
+
+**Stack:** Python · GitHub Actions · GraphQL · SVG
 
 </td>
 
