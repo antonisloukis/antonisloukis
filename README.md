@@ -124,11 +124,13 @@ Minimal, customizable GitHub profile statistics generated automatically with Pyt
 ### ◫ Development Metrics
 
 <p align="center">
-  <img
-    src="./assets/github-activity.svg"
-    width="100%"
-    alt="Automatically updated GitHub activity"
-  />
+  <a href="https://github.com/antonisloukis/minimal-github-stats">
+    <img
+      src="https://raw.githubusercontent.com/antonisloukis/minimal-github-stats/main/assets/github-stats.svg"
+      width="100%"
+      alt="Automatically updated GitHub statistics"
+    />
+  </a>
 </p>
 
 
