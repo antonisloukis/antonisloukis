@@ -60,7 +60,7 @@ Python/Pygame implementation of the classic Asteroids arcade game.
 <p align="right">
   <a href="https://github.com/antonisloukis/asteroids/stargazers">
     <img
-      src="https://img.shields.io/github/stars/antonisloukis/asteroids?style=flat&label=%E2%98%85&labelColor=161b22&color=21262d"
+      src="https://img.shields.io/github/stars/antonisloukis/asteroids?style=flat&label=%E2%98%85&labelColor=161b22&color=4c8eda"
       alt="Asteroids stars"
     />
   </a>
@@ -79,7 +79,7 @@ A Python AI coding agent with tool calling, safe file operations, and multi-step
 <p align="right">
   <a href="https://github.com/antonisloukis/bootdev-ai-agent/stargazers">
     <img
-      src="https://img.shields.io/github/stars/antonisloukis/bootdev-ai-agent?style=flat&label=%E2%98%85&labelColor=161b22&color=21262d"
+      src="https://img.shields.io/github/stars/antonisloukis/bootdev-ai-agent?style=flat&label=%E2%98%85&labelColor=161b22&color=4c8eda"
       alt="Boot.dev AI Agent stars"
     />
   </a>
@@ -102,7 +102,7 @@ Minimal, customizable GitHub profile statistics generated automatically with Pyt
 <p align="right">
   <a href="https://github.com/antonisloukis/minimal-github-stats/stargazers">
     <img
-      src="https://img.shields.io/github/stars/antonisloukis/minimal-github-stats?style=flat&label=%E2%98%85&labelColor=161b22&color=21262d"
+      src="https://img.shields.io/github/stars/antonisloukis/minimal-github-stats?style=flat&label=%E2%98%85&labelColor=161b22&color=4c8eda"
       alt="Minimal GitHub Stats stars"
     />
   </a>
