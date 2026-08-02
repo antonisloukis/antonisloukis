@@ -57,6 +57,10 @@ Python/Pygame implementation of the classic Asteroids arcade game.
 
 **Stack:** Python · Pygame
 
+<p align="right">
+  <img src="https://img.shields.io/github/stars/antonisloukis/asteroids?style=flat-square&color=1f6feb&label=%E2%98%85%20Stars" alt="Asteroids stars" />
+</p>
+
 </td>
 
 <td width="50%" valign="top">
@@ -65,7 +69,11 @@ Python/Pygame implementation of the classic Asteroids arcade game.
 
 A Python AI coding agent with tool calling, safe file operations, and multi-step agent loops.
 
-**Stack:** Python · llm-agent
+**Stack:** Python · LLM-agent
+
+<p align="right">
+  <img src="https://img.shields.io/github/stars/antonisloukis/bootdev-ai-agent?style=flat-square&color=1f6feb&label=%E2%98%85%20Stars" alt="AI Agent stars" />
+</p>
 
 </td>
 
@@ -80,6 +88,10 @@ A Python AI coding agent with tool calling, safe file operations, and multi-step
 Minimal, customizable GitHub profile statistics generated automatically with Python and GitHub Actions.
 
 **Stack:** Python · GitHub Actions · GraphQL · SVG
+
+<p align="right">
+  <img src="https://img.shields.io/github/stars/antonisloukis/minimal-github-stats?style=flat-square&color=1f6feb&label=%E2%98%85%20Stars" alt="Minimal GitHub Stats stars" />
+</p>
 
 </td>
 
