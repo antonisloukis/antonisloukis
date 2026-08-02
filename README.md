@@ -55,11 +55,12 @@
 
 Python/Pygame implementation of the classic Asteroids arcade game.
 
-**Stack:** Python · Pygame
-
-<p align="right">
+<p>
+  <strong>Stack:</strong> Python · Pygame
   <a href="https://github.com/antonisloukis/asteroids/stargazers">
     <img
+      align="right"
+      height="18"
       src="https://img.shields.io/github/stars/antonisloukis/asteroids?style=flat&label=%E2%98%85&labelColor=161b22&color=1f6feb"
       alt="Asteroids stars"
     />
@@ -74,11 +75,12 @@ Python/Pygame implementation of the classic Asteroids arcade game.
 
 A Python AI coding agent with tool calling, safe file operations, and multi-step agent loops.
 
-**Stack:** Python · LLM-agent
-
-<p align="right">
+<p>
+  <strong>Stack:</strong> Python · LLM-agent
   <a href="https://github.com/antonisloukis/bootdev-ai-agent/stargazers">
     <img
+      align="right"
+      height="18"
       src="https://img.shields.io/github/stars/antonisloukis/bootdev-ai-agent?style=flat&label=%E2%98%85&labelColor=161b22&color=1f6feb"
       alt="Boot.dev AI Agent stars"
     />
@@ -97,11 +99,12 @@ A Python AI coding agent with tool calling, safe file operations, and multi-step
 
 Minimal, customizable GitHub profile statistics generated automatically with Python and GitHub Actions.
 
-**Stack:** Python · GitHub Actions · GraphQL · SVG
-
-<p align="right">
+<p>
+  <strong>Stack:</strong> Python · GitHub Actions · GraphQL · SVG
   <a href="https://github.com/antonisloukis/minimal-github-stats/stargazers">
     <img
+      align="right"
+      height="18"
       src="https://img.shields.io/github/stars/antonisloukis/minimal-github-stats?style=flat&label=%E2%98%85&labelColor=161b22&color=1f6feb"
       alt="Minimal GitHub Stats stars"
     />
