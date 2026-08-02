@@ -61,9 +61,9 @@ Python/Pygame implementation of the classic Asteroids arcade game.
 
 <td width="50%" valign="top">
 
-### 📓 [Bookbot](https://github.com/antonisloukis/bookbot)
+### 🤖 [bootdev-ai-agent](https://github.com/antonisloukis/bootdev-ai-agent)
 
-A command-line tool that analyzes text files and prints word and character statistics.
+A Python AI coding agent with tool calling, safe file operations, and multi-step agent loops.
 
 **Stack:** Python
 
