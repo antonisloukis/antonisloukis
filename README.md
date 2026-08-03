@@ -59,7 +59,7 @@ Python/Pygame implementation of the classic Asteroids arcade game.
 
 <p>
   <strong>Stack:</strong> Python · Pygame
-  <a href="https://github.com/antonisloukis/asteroids/stargazers">
+  <a href="https://github.com/antonisloukis/asteroids">
     <img
       align="right"
       height="18"
@@ -79,7 +79,7 @@ A Python AI coding agent with tool calling, safe file operations, and multi-step
 
 <p>
   <strong>Stack:</strong> Python · LLM-agent
-  <a href="https://github.com/antonisloukis/bootdev-ai-agent/stargazers">
+  <a href="https://github.com/antonisloukis/bootdev-ai-agent">
     <img
       align="right"
       height="18"
@@ -105,7 +105,7 @@ Minimal, customizable GitHub profile statistics generated automatically with Pyt
 
 <p>
   <strong>Stack:</strong> Python · GitHub Actions · GraphQL · SVG
-  <a href="https://github.com/antonisloukis/minimal-github-stats/stargazers">
+  <a href="https://github.com/antonisloukis/minimal-github-stats">
     <img
       align="right"
       height="18"
