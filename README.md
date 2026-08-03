@@ -92,7 +92,7 @@ A Python AI coding agent with tool calling, safe file operations, and multi-step
 </tr>
 </table>
 
-<table>
+<table width="100%">
 <tr>
 
 <td width="100%" valign="top">
