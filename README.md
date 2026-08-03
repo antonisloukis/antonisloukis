@@ -46,7 +46,9 @@
 
 #### Applications
 
-<table>
+<table width="100%">
+
+<tbody>
 <tr>
 
 <td width="50%" valign="top">
@@ -90,12 +92,12 @@ A Python AI coding agent with tool calling, safe file operations, and multi-step
 </td>
 
 </tr>
-</table>
+</tbody>
 
-<table width="100%">
+<tbody>
 <tr>
 
-<td width="100%" valign="top">
+<td colspan="2" width="100%" valign="top">
 
 ### 📊 [Minimal GitHub Stats](https://github.com/antonisloukis/minimal-github-stats)
 
@@ -116,6 +118,8 @@ Minimal, customizable GitHub profile statistics generated automatically with Pyt
 </td>
 
 </tr>
+</tbody>
+
 </table>
 
 
