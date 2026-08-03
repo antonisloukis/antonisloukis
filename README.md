@@ -90,10 +90,12 @@ A Python AI coding agent with tool calling, safe file operations, and multi-step
 </td>
 
 </tr>
+</table>
 
+<table>
 <tr>
 
-<td colspan="2" width="100%" valign="top">
+<td width="100%" valign="top">
 
 ### 📊 [Minimal GitHub Stats](https://github.com/antonisloukis/minimal-github-stats)
 
