@@ -53,7 +53,18 @@
 
 <td width="50%" valign="top">
 
-### 🚀 [Asteroids](https://github.com/antonisloukis/asteroids)
+<h3>
+  <a href="https://github.com/antonisloukis/asteroids">
+    <img
+      src="./asteroids-icon.png"
+      width="30"
+      height="30"
+      align="middle"
+      alt="Asteroids icon"
+    />
+  </a>
+  &nbsp;<a href="https://github.com/antonisloukis/asteroids">Asteroids</a>
+</h3>
 
 Python/Pygame implementation of the classic Asteroids arcade game.
 
@@ -73,18 +84,29 @@ Python/Pygame implementation of the classic Asteroids arcade game.
 
 <td width="50%" valign="top">
 
-### 🤖 [RunbookProof](https://github.com/antonisloukis/runbookproof)
+<h3>
+  <a href="https://github.com/antonisloukis/runbookproof">
+    <img
+      src="./runbookproof-icon.png"
+      width="30"
+      height="30"
+      align="middle"
+      alt="RunbookProof icon"
+    />
+  </a>
+  &nbsp;<a href="https://github.com/antonisloukis/runbookproof">RunbookProof</a>
+</h3>
 
 Continuously verify commands in documentation, runbooks, and AI-generated instructions.
 
 <p>
-  <strong>Stack:</strong> cli · static-analysis · github-actions 
-  <a href="https://github.com/antonisloukis/bootdev-ai-agent">
+  <strong>Stack:</strong> CLI · Static Analysis · GitHub Actions
+  <a href="https://github.com/antonisloukis/runbookproof">
     <img
       align="right"
       height="18"
       src="https://img.shields.io/github/stars/antonisloukis/runbookproof?style=flat&label=%E2%98%85&labelColor=161b22&color=1f6feb"
-      alt="Boot.dev AI Agent stars"
+      alt="RunbookProof stars"
     />
   </a>
 </p>
