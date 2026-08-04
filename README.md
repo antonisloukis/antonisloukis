@@ -73,17 +73,17 @@ Python/Pygame implementation of the classic Asteroids arcade game.
 
 <td width="50%" valign="top">
 
-### 🤖 [bootdev-ai-agent](https://github.com/antonisloukis/bootdev-ai-agent)
+### 🤖 [RunbookProof](https://github.com/antonisloukis/runbookproof)
 
-A Python AI coding agent with tool calling, safe file operations, and multi-step agent loops.
+Continuously verify commands in documentation, runbooks, and AI-generated instructions.
 
 <p>
-  <strong>Stack:</strong> Python · LLM-agent
+  <strong>Stack:</strong> cli · static-analysis · github-actions 
   <a href="https://github.com/antonisloukis/bootdev-ai-agent">
     <img
       align="right"
       height="18"
-      src="https://img.shields.io/github/stars/antonisloukis/bootdev-ai-agent?style=flat&label=%E2%98%85&labelColor=161b22&color=1f6feb"
+      src="https://img.shields.io/github/stars/antonisloukis/runbookproof?style=flat&label=%E2%98%85&labelColor=161b22&color=1f6feb"
       alt="Boot.dev AI Agent stars"
     />
   </a>
