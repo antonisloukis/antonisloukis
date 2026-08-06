@@ -10,7 +10,7 @@
 
 ### ◈ Learning Achievements
 
-<table>
+<table align="left">
 <tr>
 
 <td align="center" width="50%">
@@ -40,7 +40,13 @@
 </tr>
 </table>
 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="./assets/mini-ufo.gif" width="36" alt="Tiny animated UFO">
+
+<br clear="all">
+
+
 
 
 ### ▣ Featured Projects
