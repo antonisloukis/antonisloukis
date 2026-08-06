@@ -10,7 +10,7 @@
 
 ### ◈ Learning Achievements
 
-<table align="left">
+<table>
 <tr>
 
 <td align="center" width="50%">
@@ -37,11 +37,8 @@
   ▸ Git Skill Tree • <b>Planned</b>
 </td>
 
-
 </tr>
 </table>
-
-
 
 
 ### ▣ Featured Projects
