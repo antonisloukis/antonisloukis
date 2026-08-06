@@ -40,6 +40,8 @@
 </tr>
 </table>
 
+<img src="./assets/mini-ufo.gif" width="36" alt="Tiny animated UFO">
+
 
 ### ▣ Featured Projects
 
