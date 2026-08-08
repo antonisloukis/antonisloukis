@@ -69,7 +69,9 @@
 Python/Pygame implementation of the classic Asteroids arcade game.
 
 <p>
-  <strong>Stack:</strong> Python · Pygame
+  <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
+  <img src="https://img.shields.io/badge/Pygame-30363D?style=flat-square" alt="Pygame">
+  
   <a href="https://github.com/antonisloukis/asteroids">
     <img
       align="right"
@@ -100,7 +102,10 @@ Python/Pygame implementation of the classic Asteroids arcade game.
 Continuously verify commands in documentation, runbooks, and AI-generated instructions.
 
 <p>
-  <strong>Stack:</strong> CLI · Static Analysis · GitHub Actions
+  <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
+  <img src="https://img.shields.io/badge/CLI-30363D?style=flat-square" alt="CLI">
+  <img src="https://img.shields.io/badge/Static_Analysis-30363D?style=flat-square" alt="Static Analysis">
+  
   <a href="https://github.com/antonisloukis/runbookproof">
     <img
       align="right"
@@ -126,7 +131,11 @@ Continuously verify commands in documentation, runbooks, and AI-generated instru
 Minimal, customizable GitHub profile statistics generated automatically with Python and GitHub Actions.
 
 <p>
-  <strong>Stack:</strong> Python · GitHub Actions · GraphQL · SVG
+  <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
+  <img src="https://img.shields.io/badge/GitHub_Actions-30363D?style=flat-square" alt="GitHub Actions">
+  <img src="https://img.shields.io/badge/GraphQL-30363D?style=flat-square" alt="GraphQL">
+  <img src="https://img.shields.io/badge/SVG-30363D?style=flat-square" alt="SVG">
+  
   <a href="https://github.com/antonisloukis/minimal-github-stats">
     <img
       align="right"
