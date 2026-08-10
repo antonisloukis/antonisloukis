@@ -153,7 +153,7 @@ Minimal, customizable GitHub profile statistics generated automatically with Pyt
 </table>
 
 ### ◎ Challenges
-
+[![Codewars](https://www.codewars.com/users/antonisloukis/badges/small)](https://www.codewars.com/users/antonisloukis)
 
 ### ◫ Development Metrics
 
