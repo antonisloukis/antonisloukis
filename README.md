@@ -40,6 +40,7 @@
 </tr>
 </table>
 
+### ◎ Challenges
 
 ### ▣ Featured Projects
 
