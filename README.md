@@ -154,7 +154,7 @@ Minimal, customizable GitHub profile statistics generated automatically with Pyt
 
 ### ◎ Challenges
 <p>
-  <img src="https://img.shields.io/static/v1?label=&message=%3C%2F%3E%20Coding&color=F59E0B&style=flat-square" alt="Coding">
+  <img src="https://img.shields.io/badge/%3C%2F%3E-Coding-F59E0B?style=flat-square" alt="Coding">
   <a href="https://www.codewars.com/users/antonisloukis">
     <img src="https://www.codewars.com/users/antonisloukis/badges/small" alt="Codewars">
   </a>
