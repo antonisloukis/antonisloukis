@@ -40,8 +40,6 @@
 </tr>
 </table>
 
-### ◎ Challenges
-
 ### ▣ Featured Projects
 
 
@@ -154,9 +152,7 @@ Minimal, customizable GitHub profile statistics generated automatically with Pyt
 
 </table>
 
-
-
-
+### ◎ Challenges
 
 
 ### ◫ Development Metrics
