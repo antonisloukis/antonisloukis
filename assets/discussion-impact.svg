@@ -27,8 +27,8 @@
                 Helvetica,
                 Arial,
                 sans-serif;
-            font-size: 11px;
-            font-weight: 400;
+            font-size: 13px;
+            font-weight: 600;
             fill: #58A6FF;
         }
 
@@ -72,6 +72,9 @@
         }
     </style>
 
+    <!-- MOVE ENTIRE WIDGET DOWN -->
+    <g transform="translate(0 20)">
+
     <!-- TITLE -->
     <text
         x="20"
@@ -88,7 +91,7 @@
         text-anchor="middle"
         class="value"
     >
-        1
+        2
     </text>
 
     <text
@@ -107,7 +110,7 @@
         text-anchor="middle"
         class="value"
     >
-        19
+        20
     </text>
 
     <text
@@ -289,4 +292,7 @@
         stroke-width="0.5"
         opacity="0.25"
     />
+
+    </g>
+
 </svg>
