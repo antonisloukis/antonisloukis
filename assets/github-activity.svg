@@ -226,7 +226,7 @@
       y="120"
       text-anchor="end"
       class="stat-value">
-      352
+      362
     </text>
     
 
@@ -278,7 +278,7 @@
       y="148"
       text-anchor="end"
       class="stat-value">
-      38
+      40
     </text>
     
 
@@ -376,7 +376,7 @@
       y="204"
       text-anchor="end"
       class="stat-value">
-      410
+      423
     </text>
     
 
@@ -483,7 +483,7 @@
     y="278"
     text-anchor="middle"
     class="metric-number">
-    410
+    423
   </text>
 
   <text
@@ -529,7 +529,7 @@
     y="278"
     text-anchor="middle"
     class="metric-number">
-    5
+    6
   </text>
 
   <text
@@ -608,6 +608,6 @@
     y="327"
     text-anchor="end"
     class="updated">
-    Updated 2026-08-13 19:28 UTC
+    Updated 2026-08-14 02:48 UTC
   </text>
 </svg>
