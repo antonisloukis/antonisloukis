@@ -163,6 +163,14 @@ Minimal, customizable GitHub profile statistics generated automatically with Pyt
 ### ◫ Development Metrics
 
 <p align="center">
+  <img
+    src="./assets/discussion-impact.svg"
+    alt="GitHub Discussions Impact"
+    width="720"
+  />
+</p>
+
+<p align="center">
   <a href="https://github.com/antonisloukis/minimal-github-stats">
     <img
       src="https://raw.githubusercontent.com/antonisloukis/minimal-github-stats/main/assets/github-stats.svg"
