@@ -164,7 +164,7 @@ Minimal, customizable GitHub profile statistics generated automatically with Pyt
 
 <p align="center">
   <img
-    src="./assets/discussion-impact.svg"
+    src="./assets/discussion-impact.svg?v=2"
     alt="GitHub Discussions Impact"
     width="720"
   />
