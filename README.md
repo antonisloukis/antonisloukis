@@ -85,35 +85,35 @@ Python/Pygame implementation of the classic Asteroids arcade game.
 
 <td width="50%" valign="top">
 
-<h3>
-  <a href="https://github.com/antonisloukis/answertrace">
-    <img
-      src="./answertrace.png"
-      width="30"
-      height="30"
-      align="middle"
-      alt="AnswerTrace icon"
-    />
-  </a>
-  &nbsp;<a href="https://github.com/antonisloukis/answertrace">AnswerTrace</a>
-</h3>
-
-GitHub Discussions contribution analytics and customizable SVG widgets for developer READMEs.
-
-<p>
-  <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
-  <img src="https://img.shields.io/badge/GitHub_Actions-30363D?style=flat-square" alt="GitHub Actions">
-  <img src="https://img.shields.io/badge/GraphQL-30363D?style=flat-square" alt="GraphQL">
-  
-  <a href="https://github.com/antonisloukis/answertrace">
+  <a href="https://github.com/marketplace/actions/answertrace">
     <img
       align="right"
-      height="18"
-      src="https://img.shields.io/github/stars/antonisloukis/answertrace?style=flat&label=%E2%98%85&labelColor=161b22&color=1f6feb"
-      alt="AnswerTrace stars"
+      src="./marketplace.png"
+      width="34"
+      alt="GitHub Marketplace badge"
     />
   </a>
-</p>
+
+  <h3>
+    <a href="https://github.com/antonisloukis/answertrace">
+      <img
+        src="./answertrace.png"
+        width="30"
+        height="30"
+        align="middle"
+        alt="AnswerTrace icon"
+      />
+    </a>
+    &nbsp;<a href="https://github.com/antonisloukis/answertrace">AnswerTrace</a>
+  </h3>
+
+  GitHub Discussions contribution analytics and customizable SVG widgets for developer READMEs.
+
+  <p>
+    <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
+    <img src="https://img.shields.io/badge/GitHub%20Actions-30363D?style=flat-square" alt="GitHub Actions">
+    <img src="https://img.shields.io/badge/GraphQL-30363D?style=flat-square" alt="GraphQL">
+  </p>
 
 </td>
 
