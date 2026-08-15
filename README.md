@@ -104,7 +104,6 @@ GitHub Discussions contribution analytics and customizable SVG widgets for devel
   <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
   <img src="https://img.shields.io/badge/GitHub_Actions-30363D?style=flat-square" alt="GitHub Actions">
   <img src="https://img.shields.io/badge/GraphQL-30363D?style=flat-square" alt="GraphQL">
-  <img src="https://img.shields.io/badge/SVG-30363D?style=flat-square" alt="SVG">
   
   <a href="https://github.com/antonisloukis/answertrace">
     <img
@@ -145,6 +144,8 @@ Continuously verify commands in documentation, runbooks, and AI-generated instru
   <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
   <img src="https://img.shields.io/badge/CLI-30363D?style=flat-square" alt="CLI">
   <img src="https://img.shields.io/badge/Static_Analysis-30363D?style=flat-square" alt="Static Analysis">
+  <img src="https://img.shields.io/badge/Sarif-30363D?style=flat-square" alt="Sarif">
+  <img src="https://img.shields.io/badge/DevSecOps-30363D?style=flat-square" alt="DevSecOps">
   
   <a href="https://github.com/antonisloukis/runbookproof">
     <img
