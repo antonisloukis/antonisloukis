@@ -89,7 +89,7 @@ Python/Pygame implementation of the classic Asteroids arcade game.
     <img
       align="right"
       src="./marketplace.png"
-      width="42"
+      width="55"
       alt="GitHub Marketplace badge"
     />
   </a>
