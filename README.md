@@ -1,9 +1,11 @@
-
 ### ◇ Tech Stack
 
 <p align="center">
 
-<img src="https://skillicons.dev/icons?i=linux,bash,git,github,docker,kubernetes,terraform,aws,go,python,vscode,grafana&theme=dark" />
+  <img
+    src="https://skillicons.dev/icons?i=linux,bash,git,github,docker,kubernetes,terraform,aws,go,python,vscode,grafana&theme=dark"
+    width="470"
+  />
 
 </p>
 
