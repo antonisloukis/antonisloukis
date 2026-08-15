@@ -10,7 +10,7 @@
 </p>
 
 
-### ◈ Learning Achievements
+### ◈ Learning & Achievements
 
 <table>
 <tr>
