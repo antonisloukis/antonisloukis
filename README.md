@@ -47,7 +47,7 @@ Python/Pygame implementation of the classic Asteroids arcade game.
 <p>
   <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
   <img src="https://img.shields.io/badge/Pygame-30363D?style=flat-square" alt="Pygame">
-
+  
   <a href="https://github.com/antonisloukis/asteroids">
     <img
       align="right"
@@ -87,19 +87,19 @@ Python/Pygame implementation of the classic Asteroids arcade game.
   GitHub Discussions contribution analytics and customizable SVG widgets for developer READMEs.
 
   <p>
-    <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
-    <img src="https://img.shields.io/badge/GitHub%20Actions-30363D?style=flat-square" alt="GitHub Actions">
-    <img src="https://img.shields.io/badge/GraphQL-30363D?style=flat-square" alt="GraphQL">
+  <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
+  <img src="https://img.shields.io/badge/GitHub%20Actions-30363D?style=flat-square" alt="GitHub Actions">
+  <img src="https://img.shields.io/badge/GraphQL-30363D?style=flat-square" alt="GraphQL">
 
-    <a href="https://github.com/antonisloukis/answertrace">
-      <img
-        align="right"
-        height="18"
-        src="https://img.shields.io/github/stars/antonisloukis/answertrace?style=flat&label=%E2%98%85&labelColor=161b22&color=1f6feb"
-        alt="AnswerTrace stars"
-      />
-    </a>
-  </p>
+  <a href="https://github.com/antonisloukis/answertrace">
+    <img
+      align="right"
+      height="18"
+      src="https://img.shields.io/github/stars/antonisloukis/answertrace?style=flat&label=%E2%98%85&labelColor=161b22&color=1f6feb"
+      alt="AnswerTrace stars"
+    />
+  </a>
+</p>
 
 </td>
 
@@ -132,7 +132,7 @@ Continuously verify commands in documentation, runbooks, and AI-generated instru
   <img src="https://img.shields.io/badge/Static_Analysis-30363D?style=flat-square" alt="Static Analysis">
   <img src="https://img.shields.io/badge/Sarif-30363D?style=flat-square" alt="Sarif">
   <img src="https://img.shields.io/badge/DevSecOps-30363D?style=flat-square" alt="DevSecOps">
-
+  
   <a href="https://github.com/antonisloukis/runbookproof">
     <img
       align="right"
@@ -150,28 +150,22 @@ Continuously verify commands in documentation, runbooks, and AI-generated instru
 
 </table>
 
-
 ### ◎ Challenges
-
 <p>
   <img src="https://img.shields.io/badge/%3C%2F%3E-Coding-F59E0B?style=flat-square" alt="Coding">
-
   <a href="https://www.codewars.com/users/antonisloukis">
     <img src="https://www.codewars.com/users/antonisloukis/badges/small" alt="Codewars">
   </a>
 </p>
 
-
 ### ◫ Development Metrics
 
 <p align="center">
-
   <img
     src="./assets/discussion-impact.svg?v=2"
     alt="GitHub Discussions Impact"
     width="720"
   />
-
   <a href="https://github.com/antonisloukis/minimal-github-stats">
     <img
       src="https://raw.githubusercontent.com/antonisloukis/minimal-github-stats/main/assets/github-stats.svg"
@@ -179,5 +173,4 @@ Continuously verify commands in documentation, runbooks, and AI-generated instru
       alt="Automatically updated GitHub statistics"
     />
   </a>
-
 </p>
