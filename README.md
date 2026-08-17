@@ -13,33 +13,7 @@
 ### ◈ Learning & Achievements
 
 <p align="center">
-
-  <a href="https://www.boot.dev/u/swatsecone">
-    <img
-      src="./assets/learning/bootdev.svg"
-      width="24%"
-      alt="Boot.dev — Backend Path — In Progress"
-    />
-  </a><a href="https://labex.io/u/antonis-loukis-55763425">
-    <img
-      src="./assets/learning/labex.svg"
-      width="24%"
-      alt="LabEx — Linux Skills — In Progress"
-    />
-  </a><a href="https://kodekloud.com/">
-    <img
-      src="./assets/learning/kodekloud.svg"
-      width="24%"
-      alt="KodeKloud — DevOps / Cloud — Planned"
-    />
-  </a><a href="https://tryhackme.com/">
-    <img
-      src="./assets/learning/tryhackme.svg"
-      width="24%"
-      alt="TryHackMe — Security — Planned"
-    />
-  </a>
-
+<a href="https://www.boot.dev/u/swatsecone"><img src="./assets/learning/bootdev.svg" width="24%" alt="Boot.dev — Backend Path — In Progress" /></a><a href="https://labex.io/u/antonis-loukis-55763425"><img src="./assets/learning/labex.svg" width="24%" alt="LabEx — Linux Skills — In Progress" /></a><a href="https://kodekloud.com/"><img src="./assets/learning/kodekloud.svg" width="24%" alt="KodeKloud — DevOps / Cloud — Planned" /></a><a href="https://tryhackme.com/"><img src="./assets/learning/tryhackme.svg" width="24%" alt="TryHackMe — Security — Planned" /></a>
 </p>
 
 
@@ -113,19 +87,19 @@ Python/Pygame implementation of the classic Asteroids arcade game.
   GitHub Discussions contribution analytics and customizable SVG widgets for developer READMEs.
 
   <p>
-  <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
-  <img src="https://img.shields.io/badge/GitHub%20Actions-30363D?style=flat-square" alt="GitHub Actions">
-  <img src="https://img.shields.io/badge/GraphQL-30363D?style=flat-square" alt="GraphQL">
+    <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
+    <img src="https://img.shields.io/badge/GitHub%20Actions-30363D?style=flat-square" alt="GitHub Actions">
+    <img src="https://img.shields.io/badge/GraphQL-30363D?style=flat-square" alt="GraphQL">
 
-  <a href="https://github.com/antonisloukis/answertrace">
-    <img
-      align="right"
-      height="18"
-      src="https://img.shields.io/github/stars/antonisloukis/answertrace?style=flat&label=%E2%98%85&labelColor=161b22&color=1f6feb"
-      alt="AnswerTrace stars"
-    />
-  </a>
-</p>
+    <a href="https://github.com/antonisloukis/answertrace">
+      <img
+        align="right"
+        height="18"
+        src="https://img.shields.io/github/stars/antonisloukis/answertrace?style=flat&label=%E2%98%85&labelColor=161b22&color=1f6feb"
+        alt="AnswerTrace stars"
+      />
+    </a>
+  </p>
 
 </td>
 
