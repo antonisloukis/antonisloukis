@@ -1,44 +1,47 @@
-
 ### ◇ Tech Stack
 
 <p align="center">
 
-<img src="https://skillicons.dev/icons?i=linux,bash,git,github,docker,kubernetes,terraform,aws,go,python,vscode,grafana&theme=dark" />
+  <img
+    src="https://skillicons.dev/icons?i=linux,bash,git,github,docker,kubernetes,terraform,aws,go,python,vscode,grafana&theme=dark"
+    width="470"
+  />
 
 </p>
 
 
-### ◈ Learning Achievements
+### ◈ Learning & Achievements
 
-<table>
-<tr>
+<p align="center">
 
-<td align="center" width="50%">
   <a href="https://www.boot.dev/u/swatsecone">
-    <img src="./bootdev.png" width="22" align="center" alt="Boot.dev">
+    <img
+      src="./assets/learning/bootdev.svg"
+      width="24%"
+      alt="Boot.dev — Backend Path — In Progress"
+    />
+  </a><a href="https://labex.io/u/antonis-loukis-55763425">
+    <img
+      src="./assets/learning/labex.svg"
+      width="24%"
+      alt="LabEx — Linux Skills — In Progress"
+    />
+  </a><a href="https://kodekloud.com/">
+    <img
+      src="./assets/learning/kodekloud.svg"
+      width="24%"
+      alt="KodeKloud — DevOps / Cloud — Planned"
+    />
+  </a><a href="https://tryhackme.com/">
+    <img
+      src="./assets/learning/tryhackme.svg"
+      width="24%"
+      alt="TryHackMe — Security — Planned"
+    />
   </a>
-  <strong>
-    &nbsp;<a href="https://www.boot.dev/u/swatsecone">Boot.dev</a>
-  </strong>
-  <br><br>
-  ▸ Backend Developer Path • <b>In Progress</b><br>
-  ▸ DevOps Path • <b>Planned</b>
-</td>
 
-<td align="center" width="50%">
-  <a href="https://labex.io/u/antonis-loukis-55763425">
-    <img src="./labexio.jpg" width="19" align="center" alt="LabEx">
-  </a>
-  <strong>
-    &nbsp;<a href="https://labex.io/u/antonis-loukis-55763425">LabEx</a>
-  </strong>
-  <br><br>
-  ▸ Linux Skill Tree • <b>Planned</b><br>
-  ▸ Git Skill Tree • <b>Planned</b>
-</td>
+</p>
 
-</tr>
-</table>
 
 ### ▣ Featured Projects
 
@@ -70,7 +73,7 @@ Python/Pygame implementation of the classic Asteroids arcade game.
 <p>
   <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
   <img src="https://img.shields.io/badge/Pygame-30363D?style=flat-square" alt="Pygame">
-  
+
   <a href="https://github.com/antonisloukis/asteroids">
     <img
       align="right"
@@ -84,6 +87,55 @@ Python/Pygame implementation of the classic Asteroids arcade game.
 </td>
 
 <td width="50%" valign="top">
+
+  <a href="https://github.com/marketplace/actions/answertrace">
+    <img
+      align="right"
+      src="./marketplace.png"
+      width="65"
+      alt="GitHub Marketplace badge"
+    />
+  </a>
+
+  <h3>
+    <a href="https://github.com/antonisloukis/answertrace">
+      <img
+        src="./answertrace.png"
+        width="30"
+        height="30"
+        align="middle"
+        alt="AnswerTrace icon"
+      />
+    </a>
+    &nbsp;<a href="https://github.com/antonisloukis/answertrace">AnswerTrace</a>
+  </h3>
+
+  GitHub Discussions contribution analytics and customizable SVG widgets for developer READMEs.
+
+  <p>
+  <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
+  <img src="https://img.shields.io/badge/GitHub%20Actions-30363D?style=flat-square" alt="GitHub Actions">
+  <img src="https://img.shields.io/badge/GraphQL-30363D?style=flat-square" alt="GraphQL">
+
+  <a href="https://github.com/antonisloukis/answertrace">
+    <img
+      align="right"
+      height="18"
+      src="https://img.shields.io/github/stars/antonisloukis/answertrace?style=flat&label=%E2%98%85&labelColor=161b22&color=1f6feb"
+      alt="AnswerTrace stars"
+    />
+  </a>
+</p>
+
+</td>
+
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+
+<td colspan="2" width="100%" valign="top">
 
 <h3>
   <a href="https://github.com/antonisloukis/runbookproof">
@@ -104,7 +156,9 @@ Continuously verify commands in documentation, runbooks, and AI-generated instru
   <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
   <img src="https://img.shields.io/badge/CLI-30363D?style=flat-square" alt="CLI">
   <img src="https://img.shields.io/badge/Static_Analysis-30363D?style=flat-square" alt="Static Analysis">
-  
+  <img src="https://img.shields.io/badge/Sarif-30363D?style=flat-square" alt="Sarif">
+  <img src="https://img.shields.io/badge/DevSecOps-30363D?style=flat-square" alt="DevSecOps">
+
   <a href="https://github.com/antonisloukis/runbookproof">
     <img
       align="right"
@@ -120,55 +174,30 @@ Continuously verify commands in documentation, runbooks, and AI-generated instru
 </tr>
 </tbody>
 
-<tbody>
-<tr>
-
-<td colspan="2" width="100%" valign="top">
-
-### 📊 [Minimal GitHub Stats](https://github.com/antonisloukis/minimal-github-stats)
-
-Minimal, customizable GitHub profile statistics generated automatically with Python and GitHub Actions.
-
-<p>
-  <img src="https://img.shields.io/badge/Python-30363D?style=flat-square" alt="Python">
-  <img src="https://img.shields.io/badge/GitHub_Actions-30363D?style=flat-square" alt="GitHub Actions">
-  <img src="https://img.shields.io/badge/GraphQL-30363D?style=flat-square" alt="GraphQL">
-  <img src="https://img.shields.io/badge/SVG-30363D?style=flat-square" alt="SVG">
-  
-  <a href="https://github.com/antonisloukis/minimal-github-stats">
-    <img
-      align="right"
-      height="18"
-      src="https://img.shields.io/github/stars/antonisloukis/minimal-github-stats?style=flat&label=%E2%98%85&labelColor=161b22&color=1f6feb"
-      alt="Minimal GitHub Stats stars"
-    />
-  </a>
-</p>
-
-</td>
-
-</tr>
-</tbody>
-
 </table>
 
+
 ### ◎ Challenges
+
 <p>
   <img src="https://img.shields.io/badge/%3C%2F%3E-Coding-F59E0B?style=flat-square" alt="Coding">
+
   <a href="https://www.codewars.com/users/antonisloukis">
     <img src="https://www.codewars.com/users/antonisloukis/badges/small" alt="Codewars">
   </a>
 </p>
 
+
 ### ◫ Development Metrics
 
 <p align="center">
+
   <img
-    src="./assets/discussion-impact.svg"
+    src="./assets/discussion-impact.svg?v=2"
     alt="GitHub Discussions Impact"
     width="720"
   />
-  <br />
+
   <a href="https://github.com/antonisloukis/minimal-github-stats">
     <img
       src="https://raw.githubusercontent.com/antonisloukis/minimal-github-stats/main/assets/github-stats.svg"
@@ -176,7 +205,5 @@ Minimal, customizable GitHub profile statistics generated automatically with Pyt
       alt="Automatically updated GitHub statistics"
     />
   </a>
+
 </p>
-
-
-
