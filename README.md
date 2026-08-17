@@ -12,35 +12,9 @@
 
 ### ◈ Learning & Achievements
 
-<table>
-<tr>
-
-<td align="center" width="50%">
-  <a href="https://www.boot.dev/u/swatsecone">
-    <img src="./bootdev.png" width="22" align="center" alt="Boot.dev">
-  </a>
-  <strong>
-    &nbsp;<a href="https://www.boot.dev/u/swatsecone">Boot.dev</a>
-  </strong>
-  <br><br>
-  ▸ Backend Developer Path • <b>In Progress</b><br>
-  ▸ DevOps Path • <b>Planned</b>
-</td>
-
-<td align="center" width="50%">
-  <a href="https://labex.io/u/antonis-loukis-55763425">
-    <img src="./labexio.jpg" width="19" align="center" alt="LabEx">
-  </a>
-  <strong>
-    &nbsp;<a href="https://labex.io/u/antonis-loukis-55763425">LabEx</a>
-  </strong>
-  <br><br>
-  ▸ Linux Skill Tree • <b>Planned</b><br>
-  ▸ Git Skill Tree • <b>Planned</b>
-</td>
-
-</tr>
-</table>
+<p align="center">
+<a href="https://www.boot.dev/u/swatsecone"><img src="./assets/learning/bootdev.svg" width="24%" alt="Boot.dev — Backend Path — In Progress" /></a><a href="https://labex.io/u/antonis-loukis-55763425"><img src="./assets/learning/labex.svg" width="24%" alt="LabEx — Linux Skills — In Progress" /></a><a href="https://kodekloud.com/"><img src="./assets/learning/kodekloud.svg" width="24%" alt="KodeKloud — DevOps / Cloud — Planned" /></a><a href="https://tryhackme.com/"><img src="./assets/learning/tryhackme.svg" width="24%" alt="TryHackMe — Security — Planned" /></a>
+</p>
 
 ### ▣ Featured Projects
 
