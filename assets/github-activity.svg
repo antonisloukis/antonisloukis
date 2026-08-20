@@ -625,7 +625,7 @@
     y="278"
     text-anchor="middle"
     class="metric-number">
-    10
+    0
   </text>
 
   <text
@@ -704,6 +704,6 @@
     y="327"
     text-anchor="end"
     class="updated">
-    Updated 2026-08-19 18:56 UTC
+    Updated 2026-08-20 01:54 UTC
   </text>
 </svg>
