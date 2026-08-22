@@ -226,7 +226,7 @@
       y="120"
       text-anchor="end"
       class="stat-value">
-      406
+      408
     </text>
     
 
@@ -278,7 +278,7 @@
       y="148"
       text-anchor="end"
       class="stat-value">
-      41
+      43
     </text>
     
 
@@ -376,7 +376,7 @@
       y="204"
       text-anchor="end"
       class="stat-value">
-      471
+      475
     </text>
     
 
@@ -394,16 +394,16 @@
             <rect
               x="535.00"
               y="98"
-              width="392.13"
+              width="392.15"
               height="7"
               fill="#3572A5"
             />
             
 
             <rect
-              x="927.13"
+              x="927.15"
               y="98"
-              width="10.68"
+              width="10.67"
               height="7"
               fill="#e34c26"
             />
@@ -412,7 +412,7 @@
             <rect
               x="937.81"
               y="98"
-              width="2.10"
+              width="2.09"
               height="7"
               fill="#663399"
             />
@@ -579,7 +579,7 @@
     y="278"
     text-anchor="middle"
     class="metric-number">
-    471
+    475
   </text>
 
   <text
@@ -625,7 +625,7 @@
     y="278"
     text-anchor="middle"
     class="metric-number">
-    0
+    1
   </text>
 
   <text
@@ -704,6 +704,6 @@
     y="327"
     text-anchor="end"
     class="updated">
-    Updated 2026-08-22 07:02 UTC
+    Updated 2026-08-22 13:03 UTC
   </text>
 </svg>
