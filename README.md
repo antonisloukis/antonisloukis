@@ -17,55 +17,13 @@
 </p>
 
 <p align="center">
-
-  <img
-    src="./assets/dev-challenges/copilot.webp"
-    width="54"
-    alt="GitHub Copilot Challenge"
-    title="GitHub Copilot Challenge"
-  />
-  &nbsp;&nbsp;
-
-  <img
-    src="./assets/dev-challenges/copilot-cli.webp"
-    width="54"
-    alt="GitHub Copilot CLI Challenge"
-    title="GitHub Copilot CLI Challenge"
-  />
-  &nbsp;&nbsp;
-
-  <img
-    src="./assets/dev-challenges/google-ai.webp"
-    width="54"
-    alt="Google AI Challenge"
-    title="Google AI Challenge"
-  />
-  &nbsp;&nbsp;
-
-  <img
-    src="./assets/dev-challenges/xano.webp"
-    width="54"
-    alt="Xano Challenge"
-    title="Xano Challenge"
-  />
-  &nbsp;&nbsp;
-
-  <img
-    src="./assets/dev-challenges/openclaw.webp"
-    width="54"
-    alt="OpenClaw Challenge"
-    title="OpenClaw Challenge"
-  />
-  &nbsp;&nbsp;
-
-  <img
-    src="./assets/dev-challenges/hermes-agent.webp"
-    width="54"
-    alt="Hermes Agent Challenge"
-    title="Hermes Agent Challenge"
-  />
-
-</p>
+  <img src="./assets/dev-challenges/copilot.webp" width="54" alt="GitHub Copilot Challenge" title="GitHub Copilot Challenge" />&nbsp;&nbsp;&nbsp;
+  <img src="./assets/dev-challenges/copilot-cli.webp" width="54" alt="GitHub Copilot CLI Challenge" title="GitHub Copilot CLI Challenge" />&nbsp;&nbsp;&nbsp;
+  <img src="./assets/dev-challenges/google-ai.webp" width="54" alt="Google AI Challenge" title="Google AI Challenge" />&nbsp;&nbsp;&nbsp;
+  <img src="./assets/dev-challenges/xano.webp" width="54" alt="Xano Challenge" title="Xano Challenge" />&nbsp;&nbsp;&nbsp;
+  <img src="./assets/dev-challenges/openclaw.webp" width="54" alt="OpenClaw Challenge" title="OpenClaw Challenge" />&nbsp;&nbsp;&nbsp;
+  <img src="./assets/dev-challenges/hermes-agent.webp" width="54" alt="Hermes Agent Challenge" title="Hermes Agent Challenge" />
+</p>  
 
 ### ▣ Featured Projects
 
