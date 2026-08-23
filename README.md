@@ -15,7 +15,7 @@
 <a href="https://www.boot.dev/u/swatsecone"><img src="./assets/learning/bootdev.svg" width="24%" alt="Boot.dev — Backend Path — In Progress" /></a><a href="https://labex.io/u/antonis-loukis-55763425"><img src="./assets/learning/labex.svg" width="24%" alt="LabEx — Linux Skills — In Progress" /></a><a href="https://kodekloud.com/"><img src="./assets/learning/kodekloud.svg" width="24%" alt="KodeKloud — DevOps / Cloud — Planned" /></a><a href="https://tryhackme.com/"><img src="./assets/learning/tryhackme.svg" width="24%" alt="TryHackMe — Security — Planned" /></a>
 <br>
 
-### ▣ Featured Projects
+<h2>▣ Featured Projects</h2>
 #### Applications
 
 <table width="100%">
