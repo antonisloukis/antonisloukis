@@ -17,32 +17,19 @@
 <br>
 <p align="center">
 
-<a href="https://github.com/antonisloukis/env-check" style="text-decoration:none; display:inline-block; line-height:0;">
-<img src="./assets/dev-challenges/copilot.webp" width="54" alt="GitHub Copilot Challenge" title="GitHub Copilot Challenge" style="display:block;">
-</a>&nbsp;&nbsp;&nbsp;
+[<img src="./assets/dev-challenges/copilot.webp" width="54" alt="GitHub Copilot Challenge" title="GitHub Copilot Challenge">](https://github.com/antonisloukis/env-check)&nbsp;&nbsp;&nbsp;
 
-<a href="https://github.com/antonisloukis/log-triage" style="text-decoration:none; display:inline-block; line-height:0;">
-<img src="./assets/dev-challenges/copilot-cli.webp" width="54" alt="GitHub Copilot CLI Challenge" title="GitHub Copilot CLI Challenge" style="display:block;">
-</a>&nbsp;&nbsp;&nbsp;
+[<img src="./assets/dev-challenges/copilot-cli.webp" width="54" alt="GitHub Copilot CLI Challenge" title="GitHub Copilot CLI Challenge">](https://github.com/antonisloukis/log-triage)&nbsp;&nbsp;&nbsp;
 
-<a href="https://github.com/antonisloukis/cloud-ops-portfolio" style="text-decoration:none; display:inline-block; line-height:0;">
-<img src="./assets/dev-challenges/google-ai.webp" width="54" alt="Google AI Challenge" title="Google AI Challenge" style="display:block;">
-</a>&nbsp;&nbsp;&nbsp;
+[<img src="./assets/dev-challenges/google-ai.webp" width="54" alt="Google AI Challenge" title="Google AI Challenge">](https://github.com/antonisloukis/cloud-ops-portfolio)&nbsp;&nbsp;&nbsp;
 
-<a href="https://github.com/antonisloukis/cloud-region-api" style="text-decoration:none; display:inline-block; line-height:0;">
-<img src="./assets/dev-challenges/xano.webp" width="54" alt="Google Gemini Challenge" title="Google Gemini Challenge" style="display:block;">
-</a>&nbsp;&nbsp;&nbsp;
+[<img src="./assets/dev-challenges/xano.webp" width="54" alt="Google Gemini Challenge" title="Google Gemini Challenge">](https://github.com/antonisloukis/cloud-region-api)&nbsp;&nbsp;&nbsp;
 
-<a href="https://github.com/antonisloukis/openclaw-cloudops-assistant" style="text-decoration:none; display:inline-block; line-height:0;">
-<img src="./assets/dev-challenges/openclaw.webp" width="54" alt="OpenClaw Challenge" title="OpenClaw Challenge" style="display:block;">
-</a>&nbsp;&nbsp;&nbsp;
+[<img src="./assets/dev-challenges/openclaw.webp" width="54" alt="OpenClaw Challenge" title="OpenClaw Challenge">](https://github.com/antonisloukis/openclaw-cloudops-assistant)&nbsp;&nbsp;&nbsp;
 
-<a href="https://github.com/antonisloukis/hermes-agent-challenge" style="text-decoration:none; display:inline-block; line-height:0;">
-<img src="./assets/dev-challenges/hermes-agent.webp" width="54" alt="Hermes Agent Challenge" title="Hermes Agent Challenge" style="display:block;">
-</a>
+[<img src="./assets/dev-challenges/hermes-agent.webp" width="54" alt="Hermes Agent Challenge" title="Hermes Agent Challenge">](https://github.com/antonisloukis/hermes-agent-challenge)
 
 </p>
-
 ### ▣ Featured Projects
 
 #### Applications
