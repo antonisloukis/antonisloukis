@@ -147,8 +147,7 @@ Continuously verify commands in documentation, runbooks, and AI-generated instru
 </table>
 
 ### ◎ Challenges
-<p>
-  <img src="https://img.shields.io/badge/%3C%2F%3E-Coding-F59E0B?style=flat-square" alt="Coding">
+<p align="center">
   <a href="https://www.codewars.com/users/antonisloukis">
     <img src="https://www.codewars.com/users/antonisloukis/badges/small" alt="Codewars">
   </a>
