@@ -28,7 +28,7 @@
 </a>&nbsp;&nbsp;&nbsp;
 
 <a href="https://github.com/antonisloukis/cloud-region-api" style="text-decoration:none;">
-<img src="./assets/dev-challenges/gemini.webp" width="54" alt="Google Gemini Challenge" title="Google Gemini Challenge">
+<img src="./assets/dev-challenges/xano.webp" width="54" alt="Google Gemini Challenge" title="Google Gemini Challenge">
 </a>&nbsp;&nbsp;&nbsp;
 
 <a href="https://github.com/antonisloukis/openclaw-cloudops-assistant" style="text-decoration:none;">
