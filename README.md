@@ -14,7 +14,7 @@
 
 <p align="center">
 <a href="https://www.boot.dev/u/swatsecone"><img src="./assets/learning/bootdev.svg" width="24%" alt="Boot.dev — Backend Path — In Progress" /></a><a href="https://labex.io/u/antonis-loukis-55763425"><img src="./assets/learning/labex.svg" width="24%" alt="LabEx — Linux Skills — In Progress" /></a><a href="https://kodekloud.com/"><img src="./assets/learning/kodekloud.svg" width="24%" alt="KodeKloud — DevOps / Cloud — Planned" /></a><a href="https://tryhackme.com/"><img src="./assets/learning/tryhackme.svg" width="24%" alt="TryHackMe — Security — Planned" /></a>
-<div align="center" style="margin-top:-18px;">
+</p><div align="center">
 <a href="https://github.com/antonisloukis/env-check"><img src="./assets/dev-challenges/copilot.webp" width="54" alt="GitHub Copilot Challenge" title="GitHub Copilot Challenge" border="0"></a>&nbsp;
 <a href="https://github.com/antonisloukis/log-triage"><img src="./assets/dev-challenges/copilot-cli.webp" width="54" alt="GitHub Copilot CLI Challenge" title="GitHub Copilot CLI Challenge" border="0"></a>&nbsp;
 <a href="https://github.com/antonisloukis/cloud-ops-portfolio"><img src="./assets/dev-challenges/google-ai.webp" width="54" alt="Google AI Challenge" title="Google AI Challenge" border="0"></a>&nbsp;
