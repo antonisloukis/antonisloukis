@@ -181,7 +181,7 @@
       y="92"
       text-anchor="end"
       class="stat-value">
-      65
+      66
     </text>
     
 
@@ -226,7 +226,7 @@
       y="120"
       text-anchor="end"
       class="stat-value">
-      414
+      445
     </text>
     
 
@@ -376,7 +376,7 @@
       y="204"
       text-anchor="end"
       class="stat-value">
-      481
+      516
     </text>
     
 
@@ -394,27 +394,36 @@
             <rect
               x="535.00"
               y="98"
-              width="392.15"
+              width="388.54"
               height="7"
               fill="#3572A5"
             />
             
 
             <rect
-              x="927.15"
+              x="923.54"
               y="98"
-              width="10.67"
+              width="14.17"
               height="7"
               fill="#e34c26"
             />
             
 
             <rect
-              x="937.81"
+              x="937.71"
               y="98"
-              width="2.09"
+              width="2.07"
               height="7"
               fill="#663399"
+            />
+            
+
+            <rect
+              x="939.78"
+              y="98"
+              width="1.50"
+              height="7"
+              fill="#384d54"
             />
             
 
@@ -448,7 +457,7 @@
               y="132"
               text-anchor="end"
               class="legend-value">
-              96.8%
+              95.9%
             </text>
             
 
@@ -471,7 +480,7 @@
               y="132"
               text-anchor="end"
               class="legend-value">
-              2.6%
+              3.5%
             </text>
             
 
@@ -502,19 +511,42 @@
               cx="740"
               cy="158"
               r="4"
-              fill="#89e051"
+              fill="#384d54"
             />
 
             <text
               x="752"
               y="163"
               class="legend-label">
-              Shell
+              Dockerfile
             </text>
 
             <text
               x="910"
               y="163"
+              text-anchor="end"
+              class="legend-value">
+              0.0%
+            </text>
+            
+
+            <circle
+              cx="540"
+              cy="189"
+              r="4"
+              fill="#89e051"
+            />
+
+            <text
+              x="552"
+              y="194"
+              class="legend-label">
+              Shell
+            </text>
+
+            <text
+              x="710"
+              y="194"
               text-anchor="end"
               class="legend-value">
               0.0%
@@ -579,7 +611,7 @@
     y="278"
     text-anchor="middle"
     class="metric-number">
-    481
+    516
   </text>
 
   <text
@@ -625,7 +657,7 @@
     y="278"
     text-anchor="middle"
     class="metric-number">
-    1
+    2
   </text>
 
   <text
@@ -704,6 +736,6 @@
     y="327"
     text-anchor="end"
     class="updated">
-    Updated 2026-08-22 18:51 UTC
+    Updated 2026-08-23 02:02 UTC
   </text>
 </svg>
