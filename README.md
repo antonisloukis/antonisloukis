@@ -47,6 +47,7 @@
 </a>
 
 </div>
+
 ### ▣ Featured Projects
 
 #### Applications
