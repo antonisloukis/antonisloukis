@@ -226,7 +226,7 @@
       y="120"
       text-anchor="end"
       class="stat-value">
-      496
+      499
     </text>
     
 
@@ -376,7 +376,7 @@
       y="204"
       text-anchor="end"
       class="stat-value">
-      570
+      573
     </text>
     
 
@@ -394,25 +394,25 @@
             <rect
               x="535.00"
               y="98"
-              width="388.54"
+              width="388.65"
               height="7"
               fill="#3572A5"
             />
             
 
             <rect
-              x="923.54"
+              x="923.65"
               y="98"
-              width="14.17"
+              width="14.08"
               height="7"
               fill="#e34c26"
             />
             
 
             <rect
-              x="937.71"
+              x="937.73"
               y="98"
-              width="2.07"
+              width="2.05"
               height="7"
               fill="#663399"
             />
@@ -457,7 +457,7 @@
               y="132"
               text-anchor="end"
               class="legend-value">
-              95.9%
+              96.0%
             </text>
             
 
@@ -611,7 +611,7 @@
     y="278"
     text-anchor="middle"
     class="metric-number">
-    570
+    573
   </text>
 
   <text
@@ -736,6 +736,6 @@
     y="327"
     text-anchor="end"
     class="updated">
-    Updated 2026-08-24 07:31 UTC
+    Updated 2026-08-24 13:16 UTC
   </text>
 </svg>
