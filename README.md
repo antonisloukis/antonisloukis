@@ -177,5 +177,6 @@ Continuously verify commands in documentation, runbooks, and AI-generated instru
   </a>
 </p>
 
+<img src="./assets/wave-divider.svg" width="100%" alt="Animated wave divider" />
 
 

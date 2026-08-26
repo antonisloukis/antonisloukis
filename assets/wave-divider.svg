@@ -1,0 +1,96 @@
+<svg width="1200" height="40" viewBox="0 0 1200 40" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="waveGradient" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1F6FEB"/>
+      <stop offset="18%" stop-color="#3B82F6"/>
+      <stop offset="32%" stop-color="#6D5DFB"/>
+      <stop offset="45%" stop-color="#7C3AED"/>
+      <stop offset="68%" stop-color="#9333EA"/>
+      <stop offset="100%" stop-color="#C026D3"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="40" fill="transparent"/>
+
+  <!-- Back wave -->
+  <g opacity="0.40">
+    <g>
+      <path fill="url(#waveGradient)"
+        d="M0 14
+           C75 6 150 6 225 14
+           S375 22 450 14
+           V40 H0 Z" />
+      <path fill="url(#waveGradient)"
+        d="M0 14
+           C75 6 150 6 225 14
+           S375 22 450 14
+           V40 H0 Z"
+        transform="translate(450 0)" />
+      <path fill="url(#waveGradient)"
+        d="M0 14
+           C75 6 150 6 225 14
+           S375 22 450 14
+           V40 H0 Z"
+        transform="translate(900 0)" />
+      <path fill="url(#waveGradient)"
+        d="M0 14
+           C75 6 150 6 225 14
+           S375 22 450 14
+           V40 H0 Z"
+        transform="translate(1350 0)" />
+
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="translate"
+        from="0 0"
+        to="-450 0"
+        dur="10s"
+        repeatCount="indefinite" />
+    </g>
+  </g>
+
+  <!-- Front wave -->
+  <g opacity="0.72">
+    <g>
+      <path fill="url(#waveGradient)"
+        d="M0 18
+           C75 12 150 12 225 18
+           S375 24 450 18
+           V40 H0 Z"
+        transform="translate(-450 0)" />
+      <path fill="url(#waveGradient)"
+        d="M0 18
+           C75 12 150 12 225 18
+           S375 24 450 18
+           V40 H0 Z" />
+      <path fill="url(#waveGradient)"
+        d="M0 18
+           C75 12 150 12 225 18
+           S375 24 450 18
+           V40 H0 Z"
+        transform="translate(450 0)" />
+      <path fill="url(#waveGradient)"
+        d="M0 18
+           C75 12 150 12 225 18
+           S375 24 450 18
+           V40 H0 Z"
+        transform="translate(900 0)" />
+      <path fill="url(#waveGradient)"
+        d="M0 18
+           C75 12 150 12 225 18
+           S375 24 450 18
+           V40 H0 Z"
+        transform="translate(1350 0)" />
+
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="translate"
+        from="0 0"
+        to="450 0"
+        dur="14s"
+        repeatCount="indefinite" />
+    </g>
+  </g>
+</svg>
