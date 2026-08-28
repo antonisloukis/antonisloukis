@@ -657,7 +657,7 @@
     y="278"
     text-anchor="middle"
     class="metric-number">
-    1
+    0
   </text>
 
   <text
@@ -736,6 +736,6 @@
     y="327"
     text-anchor="end"
     class="updated">
-    Updated 2026-08-27 22:19 UTC
+    Updated 2026-08-28 11:29 UTC
   </text>
 </svg>
